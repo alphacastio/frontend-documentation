@@ -3,6 +3,9 @@
   "learningPaths": "Learning Paths",
   "stepsLibrary": "Steps Library",
   "resources": "Resources",
-  "quickTips": "Quick Tips"
+  "quickTips": {
+    "title": "Quick Tips", 
+    "href": "https://www.alphacast.io/repositories/alphacast-quick-tips-6863"
+  }
 
 }
