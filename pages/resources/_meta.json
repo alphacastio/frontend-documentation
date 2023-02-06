@@ -1,20 +1,25 @@
 {
   "calculateVariables": "Formula Editor functions and operands",
-  "youtube_link": {
+  "youtubeLink": {
     "title": "Youtube Channel",
-    "href": "https://www.youtube.com/@alphacast7730"
+    "href": "https://www.youtube.com/@alphacast7730",
+    "newWindow": true
   },
-  "stepsLibrary": {
+  "chartsLibrary": {
     "title" : "Charts Gallery",
-    "href" : "https://www.alphacast.io/p/luciano/insights/2022-2-3-uSxhhG"
+    "href" : "https://www.alphacast.io/p/luciano/insights/2022-2-3-uSxhhG",
+    "newWindow": true
   },
-  "python": {
+  "pythonSDK": {
     "title" : "Python SDK",
-    "href" : "https://alphacast-python-sdk.readthedocs.io/en/latest/"
+    "href" : "https://alphacast-python-sdk.readthedocs.io/en/latest/",
+    "newWindow": true
+    
   },
-  "API": {
+  "APIDocumentation": {
     "title" : "API Documentation",
-    "href" : "https://documenter.getpostman.com/view/17184186/TzzDLb94"
+    "href" : "https://documenter.getpostman.com/view/17184186/TzzDLb94",
+    "newWindow": true
   }
 
 }
