@@ -2,24 +2,24 @@
   "calculateVariables": "Formula Editor functions and operands",
   "youtube": {
     "title": "Youtube Channel",
-    "url": "https://www.youtube.com/@alphacast7730"
+    "href": "https://www.youtube.com/@alphacast7730"
   },
 
   "stepsLibrary": {
     "title" : "Charts Gallery",
-    "url" : "https://www.alphacast.io/p/luciano/insights/2022-2-3-uSxhhG"
+    "href" : "https://www.alphacast.io/p/luciano/insights/2022-2-3-uSxhhG"
   },
   "python": {
     "title" : "Python SDK",
-    "url" : "https://alphacast-python-sdk.readthedocs.io/en/latest/"
+    "href" : "https://alphacast-python-sdk.readthedocs.io/en/latest/"
   },
   "API": {
     "title" : "API Documentation",
-    "url" : "https://documenter.getpostman.com/view/17184186/TzzDLb94"
+    "href" : "https://documenter.getpostman.com/view/17184186/TzzDLb94"
   },    
   "markdown": {
     "title" : "Markdown Deepdive",
-    "url" : "???"
+    "href" : "???"
   }
 
 }
