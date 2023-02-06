@@ -1,10 +1,9 @@
 {
   "calculateVariables": "Formula Editor functions and operands",
-  "youtube": {
+  "youtube_link": {
     "title": "Youtube Channel",
     "href": "https://www.youtube.com/@alphacast7730"
   },
-
   "stepsLibrary": {
     "title" : "Charts Gallery",
     "href" : "https://www.alphacast.io/p/luciano/insights/2022-2-3-uSxhhG"
@@ -16,10 +15,6 @@
   "API": {
     "title" : "API Documentation",
     "href" : "https://documenter.getpostman.com/view/17184186/TzzDLb94"
-  },    
-  "markdown": {
-    "title" : "Markdown Deepdive",
-    "href" : "???"
   }
 
 }
