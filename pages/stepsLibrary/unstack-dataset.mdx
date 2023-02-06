@@ -1,0 +1,29 @@
+# Unstack (Long to Wide)
+
+If you work with data you probably have come to the scenario where you have found the data you need but not in the shape that you need. A typical example is when data that should be row values are columns or otherwise, a situation that can not be solved by simply transposing the data. "Wide to Long" and "Long to Wide" steps are useful to solve this.
+
+"Wide to Long" and "Long to Wide" steps are useful to solve this.
+
+![Untitled Diagram.drawio (2).png](https://alphacast-images.s3.us-west-2.amazonaws.com/next-s3-uploads/7b03ceaf-082a-4008-a759-a7218f89c6a0/Untitled-Diagram.drawio-%282%29.png)
+
+### Let's see an example. [See the pipeline here](https://www.alphacast.io/pipelines/2022-6-10-UYhLlh/view)
+
+Let's begin by loading some Yahoo Finance data. You will notice the *Tickers* (Apple, Microsoft, Google. etc) values in the column "Ticker". Let's assume that you need them to be columns, side by side and that you only need the Closing price and not Open-High-Low-Close.
+
+![image.png](https://alphacast-images.s3.us-west-2.amazonaws.com/next-s3-uploads/a3b35a70-5c3b-47ec-8c7f-c094a7f9b7e5/image.png)
+
+Next, add a step "Long to Wide (Unstack"  to the pipeline.
+
+![image.png](https://alphacast-images.s3.us-west-2.amazonaws.com/next-s3-uploads/4891bc9f-969c-4fd1-b463-73ef50e1430e/image.png)
+
+And the resulting dataset will look like these
+
+![image.png](https://alphacast-images.s3.us-west-2.amazonaws.com/next-s3-uploads/65fd0a22-399d-4b3e-8203-a670b4b810a6/image.png)
+
+If you want to reverse this process use the step "Wide to Long" in which case you need to define what will be the name of the column that will now host the tickers and the name of the columns that will have the values. Also you can check and uncheck which columns should be "melted" and uncheck those that will prevail as columns.
+
+![image.png](https://alphacast-images.s3.us-west-2.amazonaws.com/next-s3-uploads/4c31f31b-23ab-4568-b722-98ebaab7e7a1/image.png)
+
+It will now look like these
+
+![image.png](https://alphacast-images.s3.us-west-2.amazonaws.com/next-s3-uploads/88d0f61d-e0ba-4ec5-9a5f-24ebcda1796b/image.png)

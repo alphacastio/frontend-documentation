@@ -1,0 +1,51 @@
+# Merge Branches
+
+users can combine datasets through common entities. You can choose which and how the entities will match and the type of matching i.e. if there is no entity match, they can keep the data from the first dataset, the second, or both datasets, or if there is a match, only that data will remain in the pipeline
+
+
+# How to merge the content of two datasets?
+
+Surely in your usual work with data you needed to join several data sources and if your calculation tool is Excel you may solve it with some combination of the VLOOKUP, HLOOKUP and/or MATCH formulas. Excel is a great solution in many cases, but it can be difficult in some scenarios. For example when...
+
+1. ...You have MANY rows. VLOOKUP can have performance issues and be very slow
+2. ...you need to search more than one field to combine the data
+3. ...the position of rows or columns changes
+4. ...you only need the data that is in both datasets
+5. ...some of the data sources change the number of rows and you have to copy or adjust the formulas.
+
+## With Alphacast you can use pipelines to combine datasets and keep them connected.
+
+## Step 1.Choose a data source
+
+To merge two datasets, you must first go to the **Create new** button and choose **pipeline**. Once there, select the repository where the pipeline will be saved and write the desired name. In **Fetch dataset** select the required dataset. Press the **Save** button.
+
+## Step 2. Select the data source to "Merge"
+
+Then click **Add step below** and choose the option **Merge with Dataset**, there you select the dataset you want to add. The best dataset combinations are obtained with data that share the frequency (daily, monthly, quarterly, or yearly). 
+
+## Step 3. Choose the common fields
+
+If we have two datasets, we have to tell the system what the "splice" method is between both datasets. That is, what will be the fields that must be in one and another dataset from which to join them.
+
+- Usually there will be only one **Date**, in which case both datasets will be **Merged** by their dates.
+- In addition to the date, datasets can have more than one entity. For example, they can have data by date and by country. In this case, it will be necessary to identify, if any, which is the field of the second dataset that corresponds to the country field.
+- If a field for the second country is not selected, the connection will only be through the date field. In this case, the rows in dataset B may appear duplicated if there is more than one occurrence of your date in dataset A.
+
+![image.png](https://alphacast-images.s3.us-west-2.amazonaws.com/next-s3-uploads/c9690c4e-7b6b-4dcd-8ed8-b54d30140e7b/image.png)
+
+In this example, we used two datasets with a monthly frequency and the same entity (Argentina). The result of this combination, when choosing the Left Join option, is that all the data from the first dataset (EMAE) will remain. Those that will be incorporated will be those data from the Consumer Price Index that coincide in date and entity.
+
+## Paso 4.  Choose the Matching type
+
+There are four types of criteria for joining
+
+![image.png](https://alphacast-images.s3.us-west-2.amazonaws.com/next-s3-uploads/ceea19d5-7c24-4843-96ba-42b49e841b7d/image.png)
+
+- **Inner join:** The new dataset will have only those rows that can be **matched**.
+- **Left join:** All the rows of dataset A will be present and the unmatched rows of dataset B are discarded.
+- **Right join:** Reverse to the previous one. All those from dataset B and discarded the unmatched ones from A.
+- **Outer join:** The data from both datasets will remain even if they do not match.
+
+## Paso 5. Publish
+
+As a result of the previous step, the combination of the columns of Dataset A and Dataset B will be obtained. From here you can continue processing it or publish it in a new dataset.

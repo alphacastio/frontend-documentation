@@ -1,0 +1,134 @@
+# Formula Editor: All functions and operators
+
+## Operators
+
+            "+":  Add. A + B
+            "-":  Substraction. A - B
+            "*":  Multiply. A * B
+            "/":  Divide. A / B
+            "^":  Power. A ^ B
+
+## Comparison 
+            ">":  Greater. 
+            ">=":  Greater Than
+            "<=":  Less or Equal Than
+            "=":  Equal
+            "!=":  Not Equal
+            "<>": Not Equal
+            "<":  Less than
+
+## Logical 
+            "and": and(conditionA, conditionB)
+            "or": or(conditionA, conditionB)
+            "xor": xor(conditionA, conditionB)
+            "not": not(conditionA)
+            "is_null": is_null(@variable)
+
+## Shift and IF
+
+``` 
+Shift: Shift index by the number of periods.
+SHIFT(Variable, lags_or_leads)
+
+Example: Calculate daily percent  percent change of variable @Close
+@Close  / Shift( @Close , 1) - 1
+
+Use of IF. Returns a value based on Logical conditions
+IF(condition, confition_if_true, condition_if_false)
+
+Example: If Pct_change is positive then return 1, else return 0
+IF(@pct_change >= 0, 1, -1)
+
+``` 
+## Row Functions
+
+These functions are calculated through all the values of the column (different than group functions below)
+
+            "power": Power(A, B)
+            "exp": Exponential(A, B)
+            "sqrt": Square Root(A)
+            "log":  Log(A)
+            "log10": Log10(A)
+            "sgn": Sign. Positive = 1, Negative -1. sng(A)
+            "abs": Absolute value. abs (A)
+            "trunc": Truncate integer. trunc(A)
+            "round": Round to N digits. round(A, N)
+            "floor": Closest intereg lower or equal than value. floor(A)
+            "ceil": Closest intereg higher or equal than value. ceil(A)
+            "sin": sin
+            "cos": cos
+            "tan": tan
+
+## Group Functions
+
+These functions are calculated within groups. Groups are defined by the columns defined by the parameters. The default groups are the entities of the Dataset (excluding the Date columns)
+
+    "rank": Compute numerical data ranks (1 through n)  rank(@Variable, @entity1, @entity2, ...)
+    "cummax": Cumulative max per group. cummax(@Variable, @entity1, @entity2, ...)
+    "cummin": Cumulative min per group
+    "cumprod": Cumulative min per group
+    "cumsum": Cumulative sum per group
+    "cumcount": Cumulative count per group
+    "backfill": backfills NA values
+    "pad": forward fills NA values
+    "pct_change": pct_change vs N lead or lags values within the 
+    "quantile": quantile position within the group. quantile(@Variable, quantile, @entity1, @entity2, ...)
+    "count": count values within the group
+    "nunique": number of unique values in the group
+    "first": first value of the group 
+    "last": last value of the group
+    "max": max value of the group values
+    "min": min value of the group values
+    "mean": mean value of the group values
+    "median": median value of the group values
+    "prod": product of the group values
+    "size": the size  of the group
+    "sem": standard error of the mean of the group
+    "std": standard error  of the group
+    "sum": sum of the values of the group
+    "var": variance of the values of the group
+
+## Rolling Window functions
+These functions perform calculation on rolling windows and are calculated within groups. Groups are defined by the columns defined by the parameters. The default groups are the entities of the Dataset (excluding the Date columns)
+
+    "rollingcount": count per group over a rolling window
+    "rollingsum": sum per group over a rolling window
+    "rollingmean": mean per group over a rolling window 
+    "rollingmedian": median per group over a rolling window
+    "rollingvar": variance per group over a rolling window
+    "rollingstd": variance per group over a rolling window
+    "rollingmin": variance per group over a rolling window
+    "rollingmax": variance per group over a rolling window
+    "rollingsem":  standard error of the mean of groups over a rolling window
+    "rollingrank":  Compute numerical data ranks (1 through n) over a rolling window. rank(@Variable, window_N, @entity1, @entity2, ...)
+
+## Date and time functions
+    "now": returns current time. now()
+    "today": returns current date. today()
+    "year": The year of the datetime
+    "month": The month of the datetime
+    "day": The days of the datetime
+    "hour": The hour of the datetime
+    "minute": The minutes of the datetime
+    "second": The seconds of the datetime
+    "microsecond": The microseconds of the datetime
+    "nanosecond": The nanoseconds of the datetime
+    "date": The date of the datetime
+    "time": The time of the datetime
+    "dayofyear": The ordinal day of year
+    "day_of_year": The ordinal day of year
+    "weekofyear": The week ordinal of the year
+    "week": The week ordinal of the year
+    "dayofweek": The number of the day of the week with Monday=0, Sunday=6
+    "day_of_week": The number of the day of the week with Monday=0, Sunday=6
+    "weekday": The number of the day of the week with Monday=0, Sunday=6
+    "quarter": Quarter of the date: Jan-Mar = 1, Apr-Jun = 2, etc.
+    "days_in_month": The number of days in the month of the datetime
+    "is_month_start": True / False indicating if first day of month (defined by frequency)
+    "is_month_end": True / False indicating if last day of month (defined by frequency)
+    "is_quarter_start": True / False indicating if first day of quarter (defined by frequency)
+    "is_quarter_end": True / False indicating if last day of quarter (defined by frequency)
+    "is_year_start": True / False  indicating if first day of year (defined by frequency)
+    "is_year_end": True / False indicating if last day of year (defined by frequency)
+    "is_leap_year": True / False indicating if the date belongs to a leap year
+
