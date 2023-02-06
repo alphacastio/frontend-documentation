@@ -1,0 +1,42 @@
+# Basic data transformation. Part 1
+
+Condicion: Select columns + apply transform + public dataset
+
+Hi! Welcome to the Intermediate Level Learning Path. 
+
+In this video, we will deep dive into one of the most powerful features of Alphacast: Pipelines.
+
+With pipelines, you can process the data within the platform. A pipeline is a sequence of steps that will transform the data. It runs every time the data sources are updated.  - Pipelines offer a no coding experience to reshape your data. 
+
+In the intermediate course, We will cover basic pipeline steps, including filtering and renamings, changes in time frequency and interpolations, seasonal adjustment, changing currencies, and more.
+
+Let's dive in. Like with charts, there are two different ways to create pipelines.
+
+The long road is to click on Create in the top right corner, then pipeline. You will be prompted a name and a repository to place the pipeline
+
+The Short road? just click transform on the dataset view.
+
+So here we are. In this example, we will be using the External Trade data of Brazil. Exports, imports, and trade balance. Let's create a basic chart to see what we have.
+
+The first goal is very simple: filter the variables, rename, create a running sum of 12 months, and republish the data in a new dataset. Nothing too fancy. Should take no more than one minute.
+
+Click on “Add Step” and choose “Select Columns”, and then select Exports and imports.
+
+Second. Add the “Rename Columns” Step and pick a new name for the variables.
+
+Third, we will scroll down to add the step “Apply Transform”. This step is a collection of the most common transformations applied to time series, including year over year, year to date, running sums, and more. 
+
+You will learn how to create your own formulas in the Advanced Course. For now, let's select “sum last 12 months” and the two variables.
+
+Notice that the step has recognized that this is a dataset with a monthly frequency. The options will change depending on the frequency. For example, month over month is not available for daily or yearly datasets.
+
+Let’s see how this looks on a chart.
+
+To finish this video, we will publish this data on a new dataset. 
+
+Add the step “Publish to dataset” and choose a name. The dataset will be created in the same repository as the pipeline. If you want it to be in another repository, move the pipeline before creating it, or head to settings.
+
+If you don't want to publish the datasets you can create a “Data Snapshot”, that will take a picture of the data up to that step and give you access to it through a link. You can use that link to download the data or, for example, to connect it to excel or python.
+
+That’s it! We have just created our first working pipeline. In the next video, we will learn how to change the frequency, do data interpolation, and how to change the units. See you there!
+
