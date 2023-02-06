@@ -1,0 +1,26 @@
+# Regroup Entities
+ 
+This step allows the user to remove an entity and regroup the data by the remaining ones selecting the formula to deal with the aggregation. Similar to "Group By" in other data frameworks such as Pandas or SQL.
+
+The Entity columns are those necessary to **uniquely** identify a row of the dataset and, to that extent, the combinations of Entities cannot be repeated. This implies that trying to remove or change entities are delicate task as they can corrupt the data
+
+Let's say, for example, that you have a Dataset with Date and Country as entities (the most common combo in Alphacast). This means that you will have many rows for the same date for different countries. **In this example, you can not drop the country column/entity because dates will then be repeated and entities have to be unique**
+
+![image.png](https://alphacast-images.s3.us-west-2.amazonaws.com/next-s3-uploads/3a6d2d1c-4e00-45dc-8eb4-f46568aedd37/image.png)
+
+### The way to deal with this is by **regrouping entities** using pipelines. 
+
+Step 1. Create a Pipeline and select the Dataset source.
+
+Step 2. add the step "Regroup Entities"
+
+Step 3. Decide which entities will be dropped by deselecting them.
+
+**Step 4. Decide what formula you will use to group the rows with repeated values in the Entity** (the Date In the previous example)
+
+For example, you can sum all the values of every country for a given date, calculate the mean or the min or max value. The optimal formula depends on the content and context of the data.
+
+The new dataset will have every entity except those you have just excluded. Also, it will have fewer rows than the original because rows with repeated entities will be grouped together
+
+
+![image.png](https://alphacast-images.s3.us-west-2.amazonaws.com/next-s3-uploads/e72cc144-9a31-4c02-99f3-0e54333f7302/image.png)

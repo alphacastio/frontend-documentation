@@ -1,0 +1,19 @@
+# Fetch FRED
+
+If you work with economic data you probably know [FRED](https://fred.stlouisfed.org/), the massive database created by the US Federal Reserve Bank of Saint Louis, that claims to have 816,000 US and international time series from 108 sources.
+
+Creating a dataset or pipeline by importing from Yahoo finance is as simple as
+
+1 Create a new pipeline (Top right --> Create New --> Pipeline) and choose "FRED" as your data source.
+
+2.To load data into Alphacast you need to know the series Code. Each series has a unique code that can be found in two places on FRED site. On the URL and next to its name. 
+
+**In the following example the series code is T10Y2Y and MORTGAGE30US**
+ 
+![image.png](https://alphacast-images.s3.us-west-2.amazonaws.com/next-s3-uploads/c236e159-f7f7-4d1a-a6f3-19d2acb014e7/image.png)
+
+3.Include as many series as you like, separating them by a comma. See a working example [here](https://www.alphacast.io/pipelines/2022-6-10-xaJGgt/view)
+
+![image.png](https://alphacast-images.s3.us-west-2.amazonaws.com/next-s3-uploads/508b20d4-9bbe-4ed6-9a18-f152f9020d47/image.png)
+
+4.Ready! You can now publish the dataset, chart the data, process it or any other cool option available in pipelines.

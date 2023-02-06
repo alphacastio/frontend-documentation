@@ -1,0 +1,33 @@
+{
+  "fetch-dataset": "Fetch Dataset",
+  "fetch-fred": "Fetch FRED",
+  "fetch-yahoo": "Fetch Yahoo Finance",
+
+  "select-columns": "Select Columns",
+  "filter-entity": "Filter Entity",
+  "filter-dates": "Filter Dates",
+  "filter-rows": "Filter Rows",
+
+  "sort-rows": "Sort Values",
+  "reorder-columns": "Reorder Columns",
+  "rename-columns": "Rename Columns",
+  "regroup-entities": "Regroup Entities",
+  "resample": "Change Frequency",
+  "merge": "Merge Branches",
+  "append-dataset": "Append Branches",
+  "unstack-dataset": "Unstack Dataset",
+  "melt-dataset": "Melt Dataset",
+
+  "transform": "All Transforms",
+  "calculate-variable": "Calculate Variable",
+
+  "talib": "Technical Analysis Indicators",
+  "debt-sustainability-analysis": "DSA Model",
+  "portfolio-analysis": "Porfolio DescriptiveStats",
+
+  "markdown": "Markdown",
+  "publish": "Publish Dataset",
+  "chart-data": "Chart Data",
+  "data-snapshot": "Data Snapshot"
+
+}
