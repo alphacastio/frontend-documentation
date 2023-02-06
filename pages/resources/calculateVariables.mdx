@@ -1,14 +1,15 @@
 # Formula Editor: All functions and operators
 
 ## Operators
-
+``` 
             "+":  Add. A + B
             "-":  Substraction. A - B
             "*":  Multiply. A * B
             "/":  Divide. A / B
             "^":  Power. A ^ B
-
+``` 
 ## Comparison 
+``` 
             ">":  Greater. 
             ">=":  Greater Than
             "<=":  Less or Equal Than
@@ -16,14 +17,15 @@
             "!=":  Not Equal
             "<>": Not Equal
             "<":  Less than
-
+``` 
 ## Logical 
+``` 
             "and": and(conditionA, conditionB)
             "or": or(conditionA, conditionB)
             "xor": xor(conditionA, conditionB)
             "not": not(conditionA)
             "is_null": is_null(@variable)
-
+``` 
 ## Shift and IF
 
 ``` 
@@ -43,7 +45,7 @@ IF(@pct_change >= 0, 1, -1)
 ## Row Functions
 
 These functions are calculated through all the values of the column (different than group functions below)
-
+``` 
             "power": Power(A, B)
             "exp": Exponential(A, B)
             "sqrt": Square Root(A)
@@ -58,11 +60,11 @@ These functions are calculated through all the values of the column (different t
             "sin": sin
             "cos": cos
             "tan": tan
-
+``` 
 ## Group Functions
 
 These functions are calculated within groups. Groups are defined by the columns defined by the parameters. The default groups are the entities of the Dataset (excluding the Date columns)
-
+``` 
     "rank": Compute numerical data ranks (1 through n)  rank(@Variable, @entity1, @entity2, ...)
     "cummax": Cumulative max per group. cummax(@Variable, @entity1, @entity2, ...)
     "cummin": Cumulative min per group
@@ -87,10 +89,10 @@ These functions are calculated within groups. Groups are defined by the columns 
     "std": standard error  of the group
     "sum": sum of the values of the group
     "var": variance of the values of the group
-
+``` 
 ## Rolling Window functions
 These functions perform calculation on rolling windows and are calculated within groups. Groups are defined by the columns defined by the parameters. The default groups are the entities of the Dataset (excluding the Date columns)
-
+``` 
     "rollingcount": count per group over a rolling window
     "rollingsum": sum per group over a rolling window
     "rollingmean": mean per group over a rolling window 
@@ -101,8 +103,10 @@ These functions perform calculation on rolling windows and are calculated within
     "rollingmax": variance per group over a rolling window
     "rollingsem":  standard error of the mean of groups over a rolling window
     "rollingrank":  Compute numerical data ranks (1 through n) over a rolling window. rank(@Variable, window_N, @entity1, @entity2, ...)
-
+``` 
 ## Date and time functions
+
+``` 
     "now": returns current time. now()
     "today": returns current date. today()
     "year": The year of the datetime
@@ -131,4 +135,4 @@ These functions perform calculation on rolling windows and are calculated within
     "is_year_start": True / False  indicating if first day of year (defined by frequency)
     "is_year_end": True / False indicating if last day of year (defined by frequency)
     "is_leap_year": True / False indicating if the date belongs to a leap year
-
+``` 

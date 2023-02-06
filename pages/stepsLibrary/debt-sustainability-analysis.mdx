@@ -63,11 +63,13 @@ In our **base scenario**, Peru keeps a constant growth rate of 3.5% per year, wi
 ### Appendix
 
 Our Debt Sustainability Model uses the standard debt dynamic equation to generate forecasts for the Debt/GDP ratio throughout the next 10 years. Specifically, we use the following the equation:
+``` 
 $$
 d_{t+1} =d_{t}\biggl[(1-\alpha)\biggl(\frac{1+i_{dt}}{(1+g_t)(1+\pi_t)}\biggl) +(\alpha)\biggl(\frac{(1+\Delta\epsilon_t)(1+i_{ft})}{(1+g_t)(1+\pi_t)}\biggl)\biggl] + pd_t
 $$
+``` 
 In which:
-
+``` 
 $$d_{t+1}$$ is the ratio Debt/GDP for the t+1 period;
 
 $$\alpha$$ is the share of foreign debt in relation to total debt;
@@ -83,10 +85,8 @@ $$i_{dt}$$ is the implicit interest rate for the domestic debt, it is calculates
 $$i_{ft}$$ is the implicit interest rate for the foreign debt, it is calculates as the ratio between the interest paid for the internal debt during the period t and the internal debt in the period t-1;
 
 $$pd_t$$ is the primary deficit of the government during the period t.
-
+``` 
 We measure the public debt and the primary déficits according to the Non-financial Public Sector concept, but this might change according to the available statistic for each country.
 
 We account for uncertainty by applying random shocks for each variable. These shocks are constructed by simulating a Multivariate Normal Distribution that uses as input the historical covariance matrix between those variables and their forecasts for the next 10 years. We simulate 2000 shocks for each each year and compute the quantiles of the Debt/GDP forecasts according to our DSA equation.
-
-### [Back to contents](#contents)
 
