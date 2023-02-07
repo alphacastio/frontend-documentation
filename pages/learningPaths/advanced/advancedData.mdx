@@ -1,6 +1,49 @@
-#Calculate Variables
+# Part 2 - Calculate Variables
  
-    Formulas basicas que se pueden usar en filter rows
-    Crear variables usando IFs
-    Rolling windows
-    Calcular el YTD, MTD
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6ipnOzqOjjg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+Hi! Welcome again to the advanced level learning path. We will now begin exploring advanced data processing features. In this video, I will show you how to create new variables with the “Calculate Variable” pipeline step.
+
+The calculate variable step is an all-purpose formula parser to create new variables in a more "Excelish" way. There are dozens of operators, comparisons, and functions that allow endless combinations that match your needs.
+
+Let’s dive in!
+
+For our first example, we will load equity data from Yahoo Finance. Let’s add the step and write the name of the tickers for Microsoft, Apple and Google. 
+
+Remember from our intermediate level data transformation video, that the entity after fetching "Yahoo Finance" data is “ticker”, and that the columns are open, close, high, low, and volume. For this example, we will select only Close.
+
+The first calculation will be very simple. At the top, we will write the name of the new variable, and in the box below, the formula. . The syntax will look very similar to other tools you probably use.
+
+Here you can use the AT sign to make reference to variables in the dataset. For example, writing AT and C, the variable "Close" will appear. With an asterisk and two, you can multiply. 
+
+For our next example, we will add a formula. We have an extensive library of formulas that you can use. As a reference, you can check the full list in the resources section of the learning center. There are operators, logical and conditional formulas, grouping functions, and more. We will illustrate some of these in a minute.
+
+You can add formulas by typing the name and opening the parenthesis. Let’s write, for example, the square root of Close
+
+Formulas can also be nested. I can, for example, replace Close with the square of Close. To do that, write power, Close, and 2.
+
+By clicking save we can see a preview.
+
+These formulas are a specific type of formula that we call “Row Functions”. That is, functions that only use data from the same row to be calculated.
+
+Another type of formula is the “Group Function”. Instead of working with a single row, the group functions split the dataset into groups defined by the entity values, and make calculations within those groups.
+
+Let’s go back to the equity data to see an example.
+
+Let’s say we want to calculate the average price of a ticker. We can do that by writing “Mean”, a group function, and defining Close as the variable. We then have to choose which is the variable that will define the groups, that in this case is “ticker”.
+
+Doing this, we are creating a new variable where each row has the average price of each ticker.
+
+There are lots of group functions that you can use such as minimum, maximums, cumulative sums, ranks, quantiles, or variance.  
+
+The next group of functions is the "Rolling Window functions". Rolling windows are a special class of group function: calculations are made within a group AND also within a rolling window. You have to define not only the group but also the number of periods to be included in the rolling calculation
+
+So, in this example, we will calculate the average price for each ticker again, but this time is a moving average of 30 days.
+
+Notice how this formula looks very similar to the "mean" formula, but now it includes the number of periods.
+
+The two new variables that we have calculated look like this.
+
+There is much more to learn in the "calculate variable" step. The conditional IF, the shift, or the date variables. I recommend you explore the quick tips section on the learning center to get inspiration. 
+
+See you in the next video, where we will dive into other advanced data transformation technics. 
