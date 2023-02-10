@@ -1,14 +1,46 @@
 # Basic data transformation. Part 3
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/g_y0bJ0tCe4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 Condicion: Calculate variable
 
-## Work in progress
+Hi, welcome to the third video of the intermediate learning path. In this video, we will build on top of the previous two and learn some new data transformation technics. 
 
-Volvamos a los datos de comercio de brazil
-Ajuste estacional de los datos
-Sumamos 12 meses y % del PBI
-Exportaciones per capita
-Calcular el trade balance a partir de expo e impo
+Let´s begin by fetching the Brazilian exports and import data again and creating a chart with it.
+
+You can see that January and February data are usually much lower than that of the rest of the year. This pattern is called seasonality. If you try, for example, to compare December data with January data you may be misled to think that the exports are falling, when the contraction is explained by seasonality
+
+You can remove that data using a process called ¨seasonal adjustment 
+
+We have implemented a quick way to perform this adjustment to the data, using the popular x 13 algorithm of the United States Census Bureau. 
+
+In order to do that, add the ”Apply transform” step and select Seasonal adjustment
+
+You need to have at least two years of data for this adjustment to work and make sure that there is no missing data. At least Five years is recommended for the results to make sense.
+
+We will choose Seasonal Adjustment and run the process
+
+See how the new series is less noisy than the original one, and how the summer contractions are no longer there.
+
+The next thing we are going to do is to transform the data to see how much it represents in terms of GDP. We will combine things that we have learned in the previous two videos.
+
+First, we will calculate a 12 monthly rolling sum. To do so let's add the step Calculate Variable.
+
+Follow me here, we will see this step in depth in the advanced level Learning Path. The formula that we will be using is rollingsum. We have to pick the variable and the number of periods in the rolling window.
+
+Let´s select exports and twelve months
+
+Now we have the running sum, let’s change the unit to share of GDP.
+
+To do that, let´s add a change unit step, select the transformation share of US Dollar GDP, and pick Brazil as the country.
+
+With this done, let´s create a chart to see how it looks.
+
+Pick the variable 12 months USD GDP and click save
+
+That´s it! Now every time the original data is updated, the chart will recreate itself.
+
+Congratulations! You have completed the Intermediate Level Learning Path. You know how to create pipelines and do basic transformations on your data. Move on to the advanced level Learning path to discover more charting and pipeline features. 
 
 
 
