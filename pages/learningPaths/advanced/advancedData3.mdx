@@ -1,5 +1,35 @@
-# Branch merge y append!!
+# Part 4 - Unstacking and Melting
 
-Create a chart merging multiple datasets
-Combinar informacion propia con informacion de Alphacast
-combinar datasets con distinta frecuencia
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TpB79T6pOm8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+Hi! In this video, we will learn about two very useful reshaping pipeline steps: Melt and Unstack.
+
+Melt and Unstack are opposite transforms. If you apply melt to a dataset, and then unstack it, you get the same dataset.
+
+Let me show you an example of how they work.
+
+We are back again with Jane and Joe Doe sales. Unstacking allows converting the unique values of an entity into columns, rearranging the data.
+
+Notice that only one column can be unstacked. In this example, we have unstacked the column "Total Sales".
+
+A Long dataset has transformed into a Wide dataset
+
+Melting is the opposite. Columns are "melted" and become entity values. Wide datasets become Long datasets.
+
+Word of notice. Melting and unstacking is not the same as transposing the data. They may look similar, but they are not the same
+
+Let's do this with an Alphacast pipeline.
+
+We have already fetched the sales data. We will now add an unstack step. Notice how we are prompted to choose the entity that we want to unstack. If you have more than one entity, only one can be unstacked.
+
+Then we will have to choose which variable we will use. The other variables will be discarded.
+
+We save and run the pipeline and we have a nice looking unstacked dataset. - - - - - - - -
+
+Melting is also very simple. You have to choose the name of the variable that will hold the column names. We will recreate the entity "SalesPerson". The name for the values will be "Total Sales"
+
+Then we have to choose which of the variables we want to melt. If you leave unselected variables, they will remain in the dataset as a column.
+
+After saving and running the pipelines, we recovered the original dataset shape.
+
+So that was it. See you in the next video.
