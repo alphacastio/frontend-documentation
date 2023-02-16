@@ -2,6 +2,35 @@
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2o_Y28raMM4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+
+Step-by-step guide:
+
+Create a new pipeline by clicking on "create pipeline" at the right top corner, instead of using the shortcut in the dataset view.
+
+Select a name and a repository for your pipeline.
+
+Select one of three options to fetch data from.
+
+Choose "Fetch Alphacast Dataset" to access any published dataset, whether by alphacast, you, or your team.
+
+Select Yahoo Finance as the data repository to retrieve the price of the equity of Google.
+
+Choose GOOG and load data from the last 2 years.
+
+Select only close for this example and click on save and run.
+
+Change the frequency of the data by adding the "change frequency" step and selecting a formula for monthly data.
+
+Add the "change frequency" step again to convert monthly data into daily data and choose an interpolation method.
+
+Change the unit to remove the effect of inflation on prices by adding the "change unit" step and selecting the United States and the variable "Close".
+
+View the new data with inflation-adjusted prices.
+
+Finish the section and move on to the next video.
+
+------------------------------------------
+
 Hi! This is part two of the basic data transformation section in the Intermediate Level course. Let's begin.
 
 First, we will create a new pipeline, but we will not use the shortcut in the dataset view, but click on create pipeline at the right top corner.
