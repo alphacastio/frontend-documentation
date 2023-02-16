@@ -2,6 +2,66 @@
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/TpB79T6pOm8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+
+Step by Step Guide:
+
+Watch the video to learn about two useful reshaping pipeline steps: Melt and Unstack.
+
+Understand that Melt and Unstack are opposite transforms.
+
+Know that if you apply melt to a dataset, and then unstack it, you get the same dataset.
+
+Learn how unstacking works by watching the video example using the Jane and Joe Doe sales dataset.
+
+Understand that unstacking allows converting the unique values of an entity into columns, rearranging the data.
+
+Know that only one column can be unstacked at a time.
+
+Recognize that a long dataset can be transformed into a wide dataset using unstack.
+
+Learn how melting works by watching the video example using an Alphacast pipeline.
+
+Know that melting is the opposite of unstacking and columns are "melted" and become entity values.
+
+Understand that wide datasets become long datasets when melted.
+
+Recognize that melting and unstacking are not the same as transposing the data.
+
+Follow the steps to unstack a dataset using an Alphacast pipeline:
+
+a. Fetch the sales data.
+
+b. Add an unstack step.
+
+c. Choose the entity that you want to unstack.
+
+d. Choose which variable you will use. The other variables will be discarded.
+
+e. Save and run the pipeline.
+
+f. Obtain a nice looking unstacked dataset.
+
+Follow the steps to melt a dataset using an Alphacast pipeline:
+a. Choose the name of the variable that will hold the column names.
+
+b. Recreate the entity.
+
+c. Choose the name for the values.
+
+d. Choose which of the variables you want to melt.
+
+e. Leave unselected variables will remain in the dataset as a column.
+
+f. Save and run the pipelines.
+
+g. Recover the original dataset shape.
+
+Remember that melting and unstacking are useful reshaping pipeline steps to transform long datasets into wide datasets and vice versa.
+
+Watch the next video for more insights.
+
+------------------------
+
 Hi! In this video, we will learn about two very useful reshaping pipeline steps: Melt and Unstack.
 
 Melt and Unstack are opposite transforms. If you apply melt to a dataset, and then unstack it, you get the same dataset.
