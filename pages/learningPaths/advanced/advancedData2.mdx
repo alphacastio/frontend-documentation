@@ -2,6 +2,40 @@
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2Naqg9pl9yg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+--------------------------
+
+step-by-step guide:
+
+Welcome to Part 3 of our advanced level learning path.
+
+In the previous video, we learned about basic pipeline transforms for data transformation, which included changing units, calculating variables, and more.
+
+These steps resulted in a new variable, a new column of the dataset, but the number of rows remained the same.
+
+In this video, we will learn about steps that reshape the dataset.
+
+The step we will be using is "Regroup entities," which allows you to redefine the entities of your dataset.
+
+You can select a new column and define it as entities, or remove them. However, removing an entity is a delicate task, as it can potentially corrupt the data.
+
+Entity columns are necessary to uniquely identify a row of the dataset, and the combinations of entities cannot be repeated.
+
+To solve the problem of duplicates, we must define how to deal with them, such as keeping the first one or combining and calculating the average or sum.
+
+To replicate the example, create a new pipeline, fetch the sales data on the first step, and add the "Regroup Data" step on the second step.
+
+Notice the options, such as adding a new entity or removing the entity "SalesPerson." You will be prompted to choose how to deal with duplicates.
+
+Removing entities and grouping data is a powerful feature with many useful uses.
+
+For example, you can remove the entity "SalesPerson" to calculate the total sales in each region or remove the region to calculate the sales of each person.
+
+Explore more examples and ideas in our learning center.
+
+That concludes this video. See you in the next one.
+
+------------------------------------------
+
 Hi! Welcome to Part 3 of our advanced level learning path.
 
 In the previous video on data transformation, we learned basic pipeline transforms, changing units, calculating variables, etc. - 
