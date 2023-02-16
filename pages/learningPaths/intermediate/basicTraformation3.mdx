@@ -4,6 +4,39 @@
 
 Condicion: Calculate variable
 
+Step-by-Step Guide:
+
+Start by opening the third video of the intermediate learning path.
+
+Fetch the Brazilian exports and import data again and create a chart with it.
+
+Notice that the January and February data are usually lower than the rest of the year due to seasonality.
+
+Remove the seasonal data using a process called "seasonal adjustment".
+
+Use the "Apply transform" step and select "Seasonal adjustment".
+
+Make sure you have at least two years of data and no missing data. Five years are recommended for better results.
+
+Choose "Seasonal Adjustment" and run the process.
+
+Observe the new series is less noisy than the original and the summer contractions are no longer there.
+
+Transform the data to see how much it represents in terms of GDP by calculating a 12-month rolling sum.
+
+Add the "Calculate Variable" step with the "rollingsum" formula, selecting exports and twelve months.
+
+Change the unit to share of GDP using the "Change Unit" step and selecting the transformation "share of US Dollar GDP" and picking Brazil as the country.
+
+Create a chart using the variable "12 months USD GDP" and click save.
+
+Congratulations! You have completed the Intermediate Level Learning Path.
+
+Move on to the advanced level Learning path to discover more charting and pipeline features.
+
+
+-----------------------------------------
+
 Hi, welcome to the third video of the intermediate learning path. In this video, we will build on top of the previous two and learn some new data transformation technics. 
 
 Let´s begin by fetching the Brazilian exports and import data again and creating a chart with it.
