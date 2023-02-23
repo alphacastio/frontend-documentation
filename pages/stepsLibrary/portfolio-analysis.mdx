@@ -5,7 +5,7 @@ Alphacast pipelines can be used to design and test portfolio and trading strateg
 
 ![image.png](https://alphacast-images.s3.us-west-2.amazonaws.com/next-s3-uploads/431498f9-5382-4f5b-9674-d43b556349e1/image.png)
 
-### Step 1. Load the data and calculate a daily return variable.
+#### Step 1. Load the data and calculate a daily return variable.
 
 You can use any dataset you want to calculate daily returns. As an example, let's load Yahoo Finance data and calculate the daily return of three assets
 
@@ -23,19 +23,19 @@ You can use any dataset you want to calculate daily returns. As an example, let'
 
 ![image.png](https://alphacast-images.s3.us-west-2.amazonaws.com/next-s3-uploads/17ff76ff-915b-4ba9-b311-fbdb7050a2a8/image.png)
 
-### Step 2. Calculate the portfolio Tear Sheet
+#### Step 2. Calculate the portfolio Tear Sheet
 
-- Add a new step "Portfolio Analysis"
+- Add a new step **Portfolio Analysis**
 - Select the metrics that you want to calculate for your portfolio. Available stats are'**Annual return, Cumulative returns, Annual volatility, Sharpe ratio, Calmar ratio, Stability, Max drawdown, Omega ratio, Sortino ratio, Skew, Kurtosis, Tail ratio, Daily value at risk, Total Return
 - Select the variable with the daily returns. "pct_change" in this example
 
 ![image.png](https://alphacast-images.s3.us-west-2.amazonaws.com/next-s3-uploads/549832b1-0ba9-4932-bd89-449402a67009/image.png)
 
-### If Tear-sheet option is on then a single Tear sheet with results will be calculate for the whole sample period
+#### If Tear-sheet option is on then a single Tear sheet with results will be calculate for the whole sample period
 
 ![image.png](https://alphacast-images.s3.us-west-2.amazonaws.com/next-s3-uploads/3409f79a-c217-4bbd-b691-b7444fbec1ca/image.png)
 
-### If Tear-sheet option is off then stats will be estimated recursively for each day of the sample, estimating the stats calculated with data from that day up to the most current day.
+#### If Tear-sheet option is off then stats will be estimated recursively for each day of the sample, estimating the stats calculated with data from that day up to the most current day.
 
 In this case, two additional parameters are required
 - dropLastN implies that stats will not be calculated from the timeframes that begin in the last N days. Default excludes 252 trading days.
@@ -45,6 +45,6 @@ The resulting dynamic Tear Sheet will [look like this dataset](https://www.alpha
 
 @chart https://charts.alphacast.io/p/luciano/exploring-alphacast-new/sharpe-ratio?tab=chart&stackMode=absolute&year=latest
 
-### Optional. Calculate Technical analytics for your portfolio
+#### Optional. Calculate Technical analytics for your portfolio
 
-Remember that with the **Technical Analysis**: *step** you can estimate 130 metrics for Technical Analysis of financial assets, Metrics include a number of cycles, momentum, volatility and volume  Indicators, standard overlap studies, patterns recognition techniques, or statistic functions.[Learn More](https://www.alphacast.io/p/luciano/insights/2022-2-5-NLiniD)
+Remember that with the **Technical Analysis**: **step** you can estimate 130 metrics for Technical Analysis of financial assets, Metrics include a number of cycles, momentum, volatility and volume  Indicators, standard overlap studies, patterns recognition techniques, or statistic functions.[Learn More](https://www.alphacast.io/p/luciano/insights/2022-2-5-NLiniD)
