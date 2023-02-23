@@ -1,9 +1,8 @@
 {
   "intro": "Introduction",
-  "advancedCharts": "Part 1. Advanced charts customization",
-  "advancedData": "Part 2. Calculating variables",
-  "advancedData2": "Part 3. Removing entities and Grouping Data",
-  "advancedData3": "Part 4. Unstacking and Melting",
-  "advancedData4": "Part 5. Merging and appending branches"
+  "advancedData": "Part 1. Calculating variables",
+  "advancedData2": "Part 2. Removing entities and Grouping Data",
+  "advancedData3": "Part 3. Unstacking and Melting",
+  "advancedData4": "Part 4. Merging and appending branches"
 
 }
