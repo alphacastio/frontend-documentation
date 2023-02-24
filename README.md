@@ -1,23 +1,27 @@
-# Nextra Docs Template 
+# Alphacast - Frontend Documentation
 
-This is a template for creating documentation with [Nextra](https://nextra.site).
+## Getting Started
 
-[**Live Demo →**](https://nextra-docs-template.vercel.app)
+To setup the project:
 
-[![](.github/screenshot.png)](https://nextra-docs-template.vercel.app)
+Ask to someone in the team for the .env file
 
-## Quick Start
+```bash
+pnpm i
+```
 
-Click the button to clone this repository and deploy it on Vercel:
+Now, run the development server:
 
-[![](https://vercel.com/button)](https://vercel.com/new/clone?s=https%3A%2F%2Fgithub.com%2Fshuding%2Fnextra-docs-template&showOptionalTeamCreation=false)
+```bash
+pnpm dev
+```
 
-## Local Development
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-First, run `pnpm i` to install the dependencies.
 
-Then, run `pnpm dev` to start the development server and visit localhost:3000.
+## Stack
 
-## License
+- Nextra
+- Tailwind 
 
-This project is licensed under the MIT License.
+Alphacast® 2023

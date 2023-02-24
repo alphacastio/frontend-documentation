@@ -4,8 +4,31 @@
   "stepsLibrary": "Steps Library",
   "resources": "Resources",
   "quickTips": {
-    "title": "Quick Tips", 
+    "title": "Quick Tips",
     "href": "https://www.alphacast.io/repositories/alphacast-quick-tips-6863"
+  },
+  "explore": {
+    "title": "Explore Datasets",
+    "type": "page",
+    "href": "https://www.alphacast.io/explore",
+    "newWindow": true
+  },
+  "Events": {
+    "title": "Events",
+    "type": "page",
+    "href": "https://www.alphacast.io/events",
+    "newWindow": true
+  },
+  "aboutUs": {
+    "title": "About Us",
+    "type": "page",
+    "href": "https://www.alphacast.io/about-us",
+    "newWindow": true
+  },
+  "contact": {
+    "title": "Contact",
+    "type": "page",
+    "href": "https://www.alphacast.io/contact",
+    "newWindow": true
   }
-
 }
