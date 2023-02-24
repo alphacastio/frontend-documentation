@@ -2,85 +2,11 @@
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2o_Y28raMM4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+You can create a pipeline by clicking on "create pipeline" at the top right corner. Select a name and a repository for your pipeline, then choose one of three options to fetch data from: Alphacast Dataset, FRED Saint Louis, and Yahoo Finance, which are two very popular data repositories. We have provided quick integration for both of them.
 
-Step-by-step guide:
+Once you have created the pipeline, you can change the frequency of the data by adding the "change frequency" step and selecting a formula for monthly data. By adding the "change frequency" step, you can take your daily data and convert it to either monthly, quarterly, or yearly data.
 
-Create a new pipeline by clicking on "create pipeline" at the right top corner, instead of using the shortcut in the dataset view.
-
-Select a name and a repository for your pipeline.
-
-Select one of three options to fetch data from.
-
-Choose "Fetch Alphacast Dataset" to access any published dataset, whether by alphacast, you, or your team.
-
-Select Yahoo Finance as the data repository to retrieve the price of the equity of Google.
-
-Choose GOOG and load data from the last 2 years.
-
-Select only close for this example and click on save and run.
-
-Change the frequency of the data by adding the "change frequency" step and selecting a formula for monthly data.
-
-Add the "change frequency" step again to convert monthly data into daily data and choose an interpolation method.
-
-Change the unit to remove the effect of inflation on prices by adding the "change unit" step and selecting the United States and the variable "Close".
-
-View the new data with inflation-adjusted prices.
-
-Finish the section and move on to the next video.
-
-------------------------------------------
-
-Hi! This is part two of the basic data transformation section in the Intermediate Level course. Let's begin.
-
-First, we will create a new pipeline, but we will not use the shortcut in the dataset view, but click on create pipeline at the right top corner.
-
-After selecting a name and a repository for your pipeline, you will be prompted to select one of three options to fetch the data from. 
-
-The step “Fetch Alphacast Dataset” is the one we used in the previous video. It lets you access any published dataset, whether by alphacast, you, or your team.
-
-FRED Saint Louis and Yahoo Finance are two very popular data repositories. We have provided quick integration to both of them.
-
-In this video, we will retrieve the price of the equity of Google from Yahoo Finance.  In order to do so, we need to know the ticker of that asset. If you head to the yahoo finance website you will notice that every asset has an associated code. That's the ticker.
-
-We will select GOOG, and load data from the last 2 years.
-
-If we choose Select Columns you will notice that the data retrieved includes high, low, open, close, volume, and more. We will select only close for this example.
-
-Clicking save and run we can take a look at the data. Notice that we are working with daily data.
-
-In this tutorial, I will show you how to change the frequency of the data.
-
-Adding the "change frequency" step you can take your daily data and convert it to either monthly, quarterly, or yearly data.
-
-Let's see what we have here. Notice how It has recognized that this is a daily dataset. Once you choose a frequency, you have to define what is the formula that will be applied to the daily data to become monthly. So, for example, we can state that the monthly value will be the sum, the average, or the first price of that month. Let's choose average.
-
-If we run the pipeline we can see that the data is now Monthly
-
-The "Change frequency" step has another very useful feature. Let's add it again. Now our data is monthly. If you want to change to a higher frequency, for example daily, then a new set of options appear. You now have to decide how you will convert a single monthly value into about 30 daily values.  
-
-That is, you have to determine the interpolation method. There are many available options: repeat the value, linear interpolation, quadratic, splines, and more.
-
-Let's skip this for now and return to our monthly data.
-
-The next thing we will do with the Google monthly data is to change the unit to remove the effect of inflation on prices. That is transform it from current prices to constant prices.
-
-To do so we have to choose the "change unit" step.
-
-The step has also recognized the frequency of your dataset, and the options will depend on it. The usual options include changing the unit to constant prices, percentage of GDP, dollars, or per capita.
-
-To change the unit, the process needs to understand which country data to use to select the consumer price index, GDP, exchange rate, or population. 
-
-There are two ways of doing that. You can either select a country or alternatively pick a column that will have the values of the country. 
-
-With this second option, you can have more than one country being adjusted in a single dataset.
-
-So we will choose the United States and the variable "Close".
-
-Let's view how the new data looks
-
-Here you have the data on current prices and the blue line here is the new inflation adjusted price
-
-So that was it! see you on the next video.
+![image](https://user-images.githubusercontent.com/106676128/221222977-1be585ce-f4ea-4d05-9481-86e35fbdf712.png)
 
 
+Alternatively, to remove the effect of inflation on prices, you can change the unit by adding the "change unit" step and selecting the United States and the variable "Close". The step will recognize the frequency of your dataset, and the available options will depend on it. The usual options include changing the unit to constant prices, percentage of GDP, dollars, or per capita.
