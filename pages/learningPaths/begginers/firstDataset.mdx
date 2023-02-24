@@ -5,72 +5,22 @@
 
 **How to Bring Your Own Data to Alphacast**
 
-Click on "create new dataset" in the top right corner of the screen.
+Click on "Create new dataset" in the top right corner of the screen.
+
+*Note that datasets in Alphacast require each variable to be in a separate column and that there must be a column with dates or timestamps to upload and visualize the data in charts.*
+
+Prepare your data avoiding empty rows and making sure column names are not repeated.
 
 **01.** Select the file you want to upload. You can select an Excel (xls or xlsx) or CSV file from your computer or Google Drive.
 
 **02.** Configuring your dataset and determining if entities are needed:
 
- - When configuring a new dataset, it is important to identify which columns will be used as entities and which columns can be ignored. Click on each column and choose to handle it as an entity or ignore. 
- - Define the type of each variable as text, number, or date and indicate which variables to ignore.
+ - It is important to identify which columns will be used as entities and which columns can be ignored because are necessary to uniquely define a row of the dataset. Click each column and select to handle it as an entity or ignore the column. 
+ - and then you can define the type of each variable as text or number and only indicate the date format for date column. 
 
+**03.** Click "Next" and choose the name of the dataset and save it in the desired repository
 
-
-___________________________________________________
-
-
-Step-by-Step Guide: How to Bring Your Own Data to Alphacast
-
-Start by watching the previous videos on discovering data and creating a dashboard.
-
-Click on "create new dataset" in the top right corner of the screen.
-
-Note that datasets in Alphacast require each variable to be in a separate column and that there must be a column with dates or timestamps to upload and visualize the data in charts.
-
-Prepare your data to upload by beginning in the A1 cell, avoiding empty rows, and making sure column names are not repeated.
-
-Determine if your dataset needs entities, which are necessary to uniquely define a row of the dataset. If entities are needed, ensure the combinations of entities cannot be repeated.
-
-If uploading manually from a CSV or excel file, select "choose your file" in the create dataset screen. If connecting data from Google Drive, select a different data source.
-
-Define the type of each variable as text, number, or date and indicate which variables to ignore.
-
-Click "Next" and choose the name of the dataset and its repository.
-
-Wait a couple of seconds for the data to upload and become ready to use.
+Wait a couple of seconds for the data to upload and become ready to use!
 
 Move on to the next section on how to create charts.
 
---------------------------------------------------
-
-Hi! In the previous videos, you've learned how to discover data and create a dashboard. Now you will learn how to bring your own data to Alphacast. Let's dive in!!
-
-There are many ways to create datasets. For instance, a new dataset may be created as a result of running a pipeline or using the A P I or Python library.
-
-In this video, we will learn to upload data manually from a C S V or excel file. We'll also learn to connect data from Google Drive.
-
-To begin, click on "create new dataset" in the top right corner
-
-A word of notice before uploading the data. The datasets in Alphacast are structured so that each variable is in a different column. When you are preparing the data to upload, begin in the A one cell, avoid empty rows, and make sure that your column names are not repeated.
-
-The datasets also must have a column with dates or timestamps in order to be uploaded and visualized in charts. If your data does not need a timestamp, just add any date, but remember that you will not be able to create a chart out of this dataset.
-
-Next come the Entities. Datasets may or may not need entities. entity columns are those necessary to uniquely define a row of the dataset. This means that the combinations of Entities cannot be repeated. 
-
-Let's see an example of all this. In this excel file, we have collected the monthly sales for both John and Jane Doe. There are two variables: Total Sales and items sold
-
-For example, in this dataset SalesPerson is an entity. The pair ”John Doe” and “February 2021” should only appear once to uniquely identify a row. 
-
-If your dataset doesn't have entities, then the date or timestamp can not be repeated. 
-
-Remember: The combinations of entities must be unique.
-
-Let's upload our data. Back in the create dataset screen, click here to choose your file. If you want to connect to a Google Drive, just select a different data source.
-
-Once you have selected your file, you have to define what is the type of each variable. if it is a text a number or a date. Also, you can indicate which variables you want to ignore.
-
-Once you have done this, click Next. The last step allows you to choose the name of the dataset and its repository.
-
-And that’s it! After a couple of seconds, you will find your data uploaded and ready to use.
-
-Now let's move to the last section of this Beginner Level Learning Path on how to create charts.
