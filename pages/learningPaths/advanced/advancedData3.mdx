@@ -3,93 +3,36 @@
 <iframe width="560" height="315" src="https://www.youtube.com/embed/TpB79T6pOm8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
-Step by Step Guide:
+**Step by Step Guide: Melt and Unstack**
 
 Watch the video to learn about two useful reshaping pipeline steps: Melt and Unstack.
 
-Understand that Melt and Unstack are opposite transforms.
+It's important to understand that Melt and Unstack are opposite transforms. Melt converts wide-format data to long-format data, while Unstack converts long-format data to wide-format data
 
-Know that if you apply melt to a dataset, and then unstack it, you get the same dataset.
+First **Fetch Dataset:** *this example use the Jane and Joe Doe sales dataset*
 
-Learn how unstacking works by watching the video example using the Jane and Joe Doe sales dataset.
+### Unstack
 
-Understand that unstacking allows converting the unique values of an entity into columns, rearranging the data.
+Unstacking is a process that involves converting the unique values of an entity into columns, which can help rearrange the data. **Know that only one column can be unstacked at a time.**
 
-Know that only one column can be unstacked at a time.
+**01.** Add an **Long to Wide (Unstack)** step in the reshaping category 
 
-Recognize that a long dataset can be transformed into a wide dataset using unstack.
+**02.** Choose the entity that you want to unstack and select the variable that you wish to use. Note that the other variables in the dataset will be discarded. If you don't want the entity name to be used as a prefix for new column names, simply uncheck the 'New column names' option
 
-Learn how melting works by watching the video example using an Alphacast pipeline.
+![image](https://user-images.githubusercontent.com/90727312/221629770-a351b191-8d3b-4b2f-8fa9-3b568e089673.png)
 
-Know that melting is the opposite of unstacking and columns are "melted" and become entity values.
+**03.** Click 'Save and Preview Data' to review the updated dataset
 
-Understand that wide datasets become long datasets when melted.
+### Melt
 
-Recognize that melting and unstacking are not the same as transposing the data.
+**01.** Add an **Wide to Long (Melt)** step in the reshaping category 
 
-Follow the steps to unstack a dataset using an Alphacast pipeline:
+**02.** Choose the name for the values and select columns to convert to rows
 
-a. Fetch the sales data.
+![image](https://user-images.githubusercontent.com/90727312/221652182-6814e296-6e10-47c5-85bf-ec5a0df16d20.png)
 
-b. Add an unstack step.
+**03.** Remember to click 'Save and Preview Data' to review the updated dataset
 
-c. Choose the entity that you want to unstack.
+Know that if you apply melt to a dataset, and then unstack it, you get the same dataset
 
-d. Choose which variable you will use. The other variables will be discarded.
-
-e. Save and run the pipeline.
-
-f. Obtain a nice looking unstacked dataset.
-
-Follow the steps to melt a dataset using an Alphacast pipeline:
-a. Choose the name of the variable that will hold the column names.
-
-b. Recreate the entity.
-
-c. Choose the name for the values.
-
-d. Choose which of the variables you want to melt.
-
-e. Leave unselected variables will remain in the dataset as a column.
-
-f. Save and run the pipelines.
-
-g. Recover the original dataset shape.
-
-Remember that melting and unstacking are useful reshaping pipeline steps to transform long datasets into wide datasets and vice versa.
-
-Watch the next video for more insights.
-
-------------------------
-
-Hi! In this video, we will learn about two very useful reshaping pipeline steps: Melt and Unstack.
-
-Melt and Unstack are opposite transforms. If you apply melt to a dataset, and then unstack it, you get the same dataset.
-
-Let me show you an example of how they work.
-
-We are back again with Jane and Joe Doe sales. Unstacking allows converting the unique values of an entity into columns, rearranging the data.
-
-Notice that only one column can be unstacked. In this example, we have unstacked the column "Total Sales".
-
-A Long dataset has transformed into a Wide dataset
-
-Melting is the opposite. Columns are "melted" and become entity values. Wide datasets become Long datasets.
-
-Word of notice. Melting and unstacking is not the same as transposing the data. They may look similar, but they are not the same
-
-Let's do this with an Alphacast pipeline.
-
-We have already fetched the sales data. We will now add an unstack step. Notice how we are prompted to choose the entity that we want to unstack. If you have more than one entity, only one can be unstacked.
-
-Then we will have to choose which variable we will use. The other variables will be discarded.
-
-We save and run the pipeline and we have a nice looking unstacked dataset. - - - - - - - -
-
-Melting is also very simple. You have to choose the name of the variable that will hold the column names. We will recreate the entity "SalesPerson". The name for the values will be "Total Sales"
-
-Then we have to choose which of the variables we want to melt. If you leave unselected variables, they will remain in the dataset as a column.
-
-After saving and running the pipelines, we recovered the original dataset shape.
-
-So that was it. See you in the next video.
+Don't forget to watch the next video to continue your learning journey!
