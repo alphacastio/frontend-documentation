@@ -12,13 +12,13 @@ Seasonal adjustment is a statistical technique used to remove the effects of sea
 
 *In the example, the Brazilian exports and imports data were used to create a chart. Notice that the January and February data were usually lower than the rest of the year due to seasonality. This effect can occur due to factors such as weather conditions, holidays, and business cycles.*
 
-To remove the seasonal data from a time series dataset you can use a transformation called **"Seasonal Adjustment"**
+To remove the seasonal data from a time serie dataset you can use a transformation called **"Seasonal Adjustment"**
 
 **02.** Add the "Apply Transform" step
 
 ![Captura de pantalla 2023-02-24 131855.jpg](https://alphacast-images.s3.us-west-2.amazonaws.com/next-s3-uploads/3f83ed68-0c0a-4550-bc4a-510c21482a93/Captura-de-pantalla-2023-02-24-131855.jpg)
 
-**03.** Select "Seasonally Adjusted" on the drop-down menu and which variable you want
+**03.** Select "Seasonally Adjusted" on the drop-down menu and which variable you want to transform.
 
 ![Captura de pantalla 2023-02-27 113209.png](https://alphacast-images.s3.us-west-2.amazonaws.com/next-s3-uploads/06bd80a2-3d01-49fb-b38c-4964871f5b1c/Captura-de-pantalla-2023-02-27-113209.png)
 
@@ -27,7 +27,9 @@ To remove the seasonal data from a time series dataset you can use a transformat
 
    ![Captura de pantalla 2023-02-27 113807.png](https://alphacast-images.s3.us-west-2.amazonaws.com/next-s3-uploads/1e9dae68-072d-4ffa-b393-b8116bb7f764/Captura-de-pantalla-2023-02-27-113807.png)
 
-#### Also, you can transform the data to see how much it represents in terms of GDP by calculating a 12-month rolling sum.
+### Rolling Sum & Percentage of GDP
+
+Also, you can transform the data to see how much it represents in terms of GDP by calculating a 12-month rolling sum.
 
 - Add the **"Calculate Variable"** step with the "rollingsum" formula, selecting exports and twelve months.
 ![Captura de pantalla 2023-02-27 115018.png](https://alphacast-images.s3.us-west-2.amazonaws.com/next-s3-uploads/c8ea707b-b6d0-45aa-86e2-02ba35614f6e/Captura-de-pantalla-2023-02-27-115018.png)
