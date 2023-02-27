@@ -2,74 +2,14 @@
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2Naqg9pl9yg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
---------------------------
-
 step-by-step guide:
 
-Welcome to Part 3 of our advanced level learning path.
+To reshape the dataset, we will be using "Regroup entities," which allows you to redefine the entities. In this step, you can select a new column and define it as entities, or remove them. However, removing an entity is a delicate task, as it can potentially corrupt the data.
 
-In the previous video, we learned about basic pipeline transforms for data transformation, which included changing units, calculating variables, and more.
+01. Fetch Alphacast Dataset
 
-These steps resulted in a new variable, a new column of the dataset, but the number of rows remained the same.
+To create a pipeline by clicking on Create Pipeline at the top right corner. Select a name and a repository for your pipeline, then choose Fetch Alphacast Dataset. For this example, search Sales Data
+ 
+02. Regroup Entities
 
-In this video, we will learn about steps that reshape the dataset.
-
-The step we will be using is "Regroup entities," which allows you to redefine the entities of your dataset.
-
-You can select a new column and define it as entities, or remove them. However, removing an entity is a delicate task, as it can potentially corrupt the data.
-
-Entity columns are necessary to uniquely identify a row of the dataset, and the combinations of entities cannot be repeated.
-
-To solve the problem of duplicates, we must define how to deal with them, such as keeping the first one or combining and calculating the average or sum.
-
-To replicate the example, create a new pipeline, fetch the sales data on the first step, and add the "Regroup Data" step on the second step.
-
-Notice the options, such as adding a new entity or removing the entity "SalesPerson." You will be prompted to choose how to deal with duplicates.
-
-Removing entities and grouping data is a powerful feature with many useful uses.
-
-For example, you can remove the entity "SalesPerson" to calculate the total sales in each region or remove the region to calculate the sales of each person.
-
-Explore more examples and ideas in our learning center.
-
-That concludes this video. See you in the next one.
-
-------------------------------------------
-
-Hi! Welcome to Part 3 of our advanced level learning path.
-
-In the previous video on data transformation, we learned basic pipeline transforms, changing units, calculating variables, etc. - 
-
-Most of those steps shared a common feature. The output of the calculations resulted in a new variable, a new column of the dataset. The number of rows of data remains unchanged.
-
-In this video, we will learn about steps that reshape the dataset. The input is a dataset with a number of rows and columns, but the output will usually be different.
-
-The step that we will be using in this video is Regroup entities.
-
-“Regroup entities” let you redefine the entities of your dataset. You can select the new column and define them as entities and also remove them.
-
-However, removing an entity is a delicate task,  as it can potentially corrupt the data. Remember, the Entity columns are those necessary to uniquely identify a row of the dataset and, to that extent, the combinations of Entities cannot be repeated. 
-
-Let’s see an example of this. Let’s go back to John and Jane Doe's sales data. 
-
-Notice what happens when we try to remove the entity SalesPerson. Now there are duplicate rows for the three years. 
-
-The way to solve this problem is to define how to deal with those duplicates so that only one value remains. We could, for example, choose to keep the first one or combine and calculate the average or the sum.
-
-Notice how this new data, with the sum of the two values for each year, now have no duplicates.
-
-Let’s do this on alphacast.
-
-We have just created a new pipeline, that fetches the sales data on the first step. In the second step, let’s add the step Regroup Data
-
-Notice the options. We can add a new entity to the dataset, by clicking on “Select a variable as new Entity”. We will not do this now.
-
-To replicate the example, we will remove the entity “SalesPerson”. Notice how we are immediately prompted to choose how are we going to deal with the duplicates. There are a number of options here, and you can define a different function for each variable.
-
-Removing entities and grouping data is a very powerful feature that has many useful uses. 
-
-For example, let’s suppose that you now have two entities, with the sales for each sales person in each region. You can remove the entity salesperson to calculate the total sales in each region. Alternatively, you can remove the region to calculate the sales of each person.
-
-Explore more examples and ideas in our learning center.
-
-Let's call it a day, see you in the next video
+In our example, be need to solve the problem of duplicates, we must define how to deal with them, such as keeping the first one or combining and calculating the average or sum. You can remove the entity "SalesPerson" to calculate the total sales in each region or remove the region to calculate the sales of each person.
