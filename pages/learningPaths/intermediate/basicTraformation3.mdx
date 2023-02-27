@@ -4,94 +4,46 @@
 
 **Apply Transform: Seasonally adjusted**
 
-Seasonal adjustment is a statistical technique used to remove the effects of seasonal factors from a time series dataset. 
+Start by opening the third video of the intermediate learning path.
 
-To remove the seasonal data from a time series dataset you can use a transformation called **"Seasonal Adjustment"**
+Seasonal adjustment is a statistical technique used to remove the effects of seasonal factors from a time series dataset. 
 
 *Make sure you have at least two years of data and no missing data. Five years are recommended for better results!*
 
+**01.** Fetch Alphacast Dataset. 
 
-**01.** Fetch Alphacast Dataset 
+*In the example, the Brazilian exports and imports data were used to create a chart. Notice that the January and February data were usually lower than the rest of the year due to seasonality. This effect can occur due to factors such as weather conditions, holidays, and business cycles.*
 
-**02.** Add the "Apply Transform" step and select "Seasonally Adjusted" on the drop-down menu
+To remove the seasonal data from a time series dataset you can use a transformation called **"Seasonal Adjustment"**
+
+**02.** Add the "Apply Transform" step
 
 ![Captura de pantalla 2023-02-24 131855.jpg](https://alphacast-images.s3.us-west-2.amazonaws.com/next-s3-uploads/3f83ed68-0c0a-4550-bc4a-510c21482a93/Captura-de-pantalla-2023-02-24-131855.jpg)
 
+**03.** Select "Seasonally Adjusted" on the drop-down menu
+
+![Captura de pantalla 2023-02-27 113209.png](https://alphacast-images.s3.us-west-2.amazonaws.com/next-s3-uploads/06bd80a2-3d01-49fb-b38c-4964871f5b1c/Captura-de-pantalla-2023-02-27-113209.png)
 
 
-________
-Step-by-Step Guide:
+*You can observe the new series is less noisy than the original and the summer contractions are no longer there.*
 
-Start by opening the third video of the intermediate learning path.
+   ![Captura de pantalla 2023-02-27 113807.png](https://alphacast-images.s3.us-west-2.amazonaws.com/next-s3-uploads/1e9dae68-072d-4ffa-b393-b8116bb7f764/Captura-de-pantalla-2023-02-27-113807.png)
 
-Fetch the Brazilian exports and import data again and create a chart with it.
+Also, you can transform the data to see how much it represents in terms of GDP by calculating a 12-month rolling sum.
 
-Notice that the January and February data are usually lower than the rest of the year due to seasonality.
+- Add the **"Calculate Variable"** step with the "rollingsum" formula, selecting exports and twelve months.
+![Captura de pantalla 2023-02-27 115018.png](https://alphacast-images.s3.us-west-2.amazonaws.com/next-s3-uploads/c8ea707b-b6d0-45aa-86e2-02ba35614f6e/Captura-de-pantalla-2023-02-27-115018.png)
 
-Remove the seasonal data using a process called "seasonal adjustment".
+- and then change the unit to share of GDP using the **"Apply Country Trasform"** step and select on the drop-down menu **"share of US Dollar GDP"** and picking Brazil as the country value.
+  
+  ![Captura de pantalla 2023-02-27 115649.png](https://alphacast-images.s3.us-west-2.amazonaws.com/next-s3-uploads/32ff1d0a-b8f2-498a-b46b-412161f43c29/Captura-de-pantalla-2023-02-27-115649.png)
 
-Use the "Apply transform" step and select "Seasonal adjustment".
+- Create a chart using the variable "12 months USD GDP" and click save.
 
-Make sure you have at least two years of data and no missing data. Five years are recommended for better results.
-
-Choose "Seasonal Adjustment" and run the process.
-
-Observe the new series is less noisy than the original and the summer contractions are no longer there.
-
-Transform the data to see how much it represents in terms of GDP by calculating a 12-month rolling sum.
-
-Add the "Calculate Variable" step with the "rollingsum" formula, selecting exports and twelve months.
-
-Change the unit to share of GDP using the "Change Unit" step and selecting the transformation "share of US Dollar GDP" and picking Brazil as the country.
-
-Create a chart using the variable "12 months USD GDP" and click save.
+  ![image.png](https://alphacast-images.s3.us-west-2.amazonaws.com/next-s3-uploads/b4e0fd78-e5af-4ba5-9838-8070f9fd934a/image.png)
 
 Congratulations! You have completed the Intermediate Level Learning Path.
 
 Move on to the advanced level Learning path to discover more charting and pipeline features.
 
-
------------------------------------------
-
-Hi, welcome to the third video of the intermediate learning path. In this video, we will build on top of the previous two and learn some new data transformation technics. 
-
-Let´s begin by fetching the Brazilian exports and import data again and creating a chart with it.
-
-You can see that January and February data are usually much lower than that of the rest of the year. This pattern is called seasonality. If you try, for example, to compare December data with January data you may be misled to think that the exports are falling, when the contraction is explained by seasonality
-
-You can remove that data using a process called ¨seasonal adjustment 
-
-We have implemented a quick way to perform this adjustment to the data, using the popular x 13 algorithm of the United States Census Bureau. 
-
-In order to do that, add the ”Apply transform” step and select Seasonal adjustment
-
-You need to have at least two years of data for this adjustment to work and make sure that there is no missing data. At least Five years is recommended for the results to make sense.
-
-We will choose Seasonal Adjustment and run the process
-
-See how the new series is less noisy than the original one, and how the summer contractions are no longer there.
-
-The next thing we are going to do is to transform the data to see how much it represents in terms of GDP. We will combine things that we have learned in the previous two videos.
-
-First, we will calculate a 12 monthly rolling sum. To do so let's add the step Calculate Variable.
-
-Follow me here, we will see this step in depth in the advanced level Learning Path. The formula that we will be using is rollingsum. We have to pick the variable and the number of periods in the rolling window.
-
-Let´s select exports and twelve months
-
-Now we have the running sum, let’s change the unit to share of GDP.
-
-To do that, let´s add a change unit step, select the transformation share of US Dollar GDP, and pick Brazil as the country.
-
-With this done, let´s create a chart to see how it looks.
-
-Pick the variable 12 months USD GDP and click save
-
-That´s it! Now every time the original data is updated, the chart will recreate itself.
-
-Congratulations! You have completed the Intermediate Level Learning Path. You know how to create pipelines and do basic transformations on your data. Move on to the advanced level Learning path to discover more charting and pipeline features. 
-
-
-
-
-
+Good luck with your learning path!
