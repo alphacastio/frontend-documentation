@@ -3,6 +3,7 @@ import { DocsThemeConfig } from 'nextra-theme-docs'
 import Footer from './components/Footer'
 
 const config: DocsThemeConfig = {
+  primaryHue: 272,
   logo: <img
     width="115"
     height="24"
@@ -15,6 +16,9 @@ const config: DocsThemeConfig = {
     alt="Alphcast"
   />,
   docsRepositoryBase: 'https://github.com/alphacastio/frontend-documentation/edit/main/',
+  feedback: {
+    content: null
+  },
   footer: {
     text: <Footer />
   },
