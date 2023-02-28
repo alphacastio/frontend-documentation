@@ -6,65 +6,31 @@
 
 **Step by Step Guide: How to Transform Data with Pipelines**
 
-Pipelines are the most powerfull feature in the platform which allows you to process data within the platform. It is a sequence of steps that transform the data in many ways. pipelines you will
+Pipelines are the most powerful feature of the platform, allowing you to process data within it. They consist of a sequence of steps that transform data in a variety of ways.
 
-In the video, learn about pipelines and how they can process data in Alphacast without coding.
+This video will teach you about pipelines and how they can process data in Alphacast without requiring any coding
 
-In the video, learn about basic pipeline steps, including filtering, renaming, changes in time frequency and interpolations, seasonal adjustment, changing currencies, and more.
+You can choose between taking the long or short road to create a pipeline:
 
-Choose between the long road or short road to create a pipeline. The long road involves clicking on Create in the top right corner, then pipeline, and entering a name and repository. The short road involves clicking transform on the dataset view.
+- The long road involves click on **Create new Pipeline** in the top right corner of the screen, then choose the repository and the desired pipeline name, and finally click on the 'create' button.
 
-In the example used in the video, we will be using the External Trade data of Brazil. Exports, imports, and trade balance.
+![image](https://user-images.githubusercontent.com/90727312/221910379-cf20b150-db30-47b9-ba9d-ac7a6a379430.png)
 
-Click on "Add Step" and choose "Select Columns". Select Exports and imports.
+- The quick way to do it is by clicking on 'Transform' directly in the dataset view.
 
-Add the "Rename Columns" Step and pick a new name for the variables.
+**01.** Fetch Alphacast Dataset:
+*in the example, the external trade data from Brazil's SECEX* 
 
-Scroll down to add the step "Apply Transform". Select "sum last 12 months" and the two variables.
+**02.** Add the **Select Columns** step in the filters category: *Select the columns you want to use, in this case, 'exports' and 'imports*
 
-Add the step "Publish to dataset" and choose a name. The dataset will be created in the same repository as the pipeline.
+**03.** Add the **Rename Columns** step in the reshaping category and pick a new name for the variables
 
-If you don't want to publish the datasets, create a "Data Snapshot" to take a picture of the data up to that step and give you access to it through a link.
+**04.** Add the **Apply Transform** step and select **sum last 12 months** on the drop-down menu and which variable you want to transform.                             
+  ![image](https://user-images.githubusercontent.com/90727312/221948847-cd9fc202-8d5f-4a6a-bf07-20c83351fce5.png)
 
-In the next video, learn how to change the frequency, do data interpolation, and how to change the units.
 
------------------------------------------
+**05.** Add the step **Publish to dataset** and choose a name. The dataset will be created in the same repository as the pipeline.
 
-Hi! Welcome to the Intermediate Level Learning Path. 
+**06.** If you do not wish to publish the datasets, you can create a **Data Snapshot** which takes a snapshot of the data up to that step and provides you access to it through a link.
 
-In this video, we will deep dive into one of the most powerful features of Alphacast: Pipelines.
-
-With pipelines, you can process the data within the platform. A pipeline is a sequence of steps that will transform the data. It runs every time the data sources are updated.  - Pipelines offer a no coding experience to reshape your data. 
-
-In the intermediate course, We will cover basic pipeline steps, including filtering and renamings, changes in time frequency and interpolations, seasonal adjustment, changing currencies, and more.
-
-Let's dive in. Like with charts, there are two different ways to create pipelines.
-
-The long road is to click on Create in the top right corner, then pipeline. You will be prompted a name and a repository to place the pipeline
-
-The Short road? just click transform on the dataset view.
-
-So here we are. In this example, we will be using the External Trade data of Brazil. Exports, imports, and trade balance. Let's create a basic chart to see what we have.
-
-The first goal is very simple: filter the variables, rename, create a running sum of 12 months, and republish the data in a new dataset. Nothing too fancy. Should take no more than one minute.
-
-Click on “Add Step” and choose “Select Columns”, and then select Exports and imports.
-
-Second. Add the “Rename Columns” Step and pick a new name for the variables.
-
-Third, we will scroll down to add the step “Apply Transform”. This step is a collection of the most common transformations applied to time series, including year over year, year to date, running sums, and more. 
-
-You will learn how to create your own formulas in the Advanced Course. For now, let's select “sum last 12 months” and the two variables.
-
-Notice that the step has recognized that this is a dataset with a monthly frequency. The options will change depending on the frequency. For example, month over month is not available for daily or yearly datasets.
-
-Let’s see how this looks on a chart.
-
-To finish this video, we will publish this data on a new dataset. 
-
-Add the step “Publish to dataset” and choose a name. The dataset will be created in the same repository as the pipeline. If you want it to be in another repository, move the pipeline before creating it, or head to settings.
-
-If you don't want to publish the datasets you can create a “Data Snapshot”, that will take a picture of the data up to that step and give you access to it through a link. You can use that link to download the data or, for example, to connect it to excel or python.
-
-That’s it! We have just created our first working pipeline. In the next video, we will learn how to change the frequency, do data interpolation, and how to change the units. See you there!
-
+In the next video, you will learn how to change the frequency, perform data interpolation, and modify the units.
