@@ -5,13 +5,11 @@
 Both Steps are used for combine datasets: With the Append Step, you will combine vertically both datasets. On the other hand, Merge allows you to combine datasets side by side by matching entity values on both datasets.
 
 **01.**	Clipping Datasets
-
 Go to the repository Sales Dataset Example. Then, clipped the three datasets to use them later:
 
 ![clipped .png](https://alphacast-images.s3.us-west-2.amazonaws.com/next-s3-uploads/b868bdaa-f7d2-4601-820d-e34db6aa9f94/clipped-.png)
 
-**02** Create a Pipeline
-
+**02.** Create a Pipeline
 As we have seen, go to the right corner of your screen Create New then click on Pipeline
 
 ![create a pipeline 1.jpg](https://alphacast-images.s3.us-west-2.amazonaws.com/next-s3-uploads/1658b3dd-86b9-4d93-983c-0f32a240c41c/create-a-pipeline-1.jpg)
@@ -20,17 +18,17 @@ We will begin by loading Jane's sales data. Let's select **Fetch Alphacast Datas
 
 ![Jones Sales 1.png](https://alphacast-images.s3.us-west-2.amazonaws.com/next-s3-uploads/89d69bbb-3a66-4609-9d1a-f00bb2ef5691/Jones-Sales-1.png)
 
-***03**	Append Step
+**03.** Append Step
 
 ![image.png](https://alphacast-images.s3.us-west-2.amazonaws.com/next-s3-uploads/5c7cfb0e-9486-4cd6-8993-53411a3c4773/image.png)
 
 We have a number of options here. First, we need to choose which data we are going to append  Jhon Doe information to our data. We have two options:
 
-3.1 Load a dataset
+**3.1** Load a dataset
 
 ![append 1 o 2.png](https://alphacast-images.s3.us-west-2.amazonaws.com/next-s3-uploads/90fcb38e-0ae2-4f27-b9f0-dc2bd4e4d42e/append-1-o-2.png)
 
-3.2 Fetch a dataset
+**3.2** Fetch a dataset
 
 We have the option of transforming it before appending it.  If you like, you can add more steps to be executed between the fetching of the data and the append step.
 
@@ -38,7 +36,7 @@ We have the option of transforming it before appending it.  If you like, you can
 
 ![append 2p.png](https://alphacast-images.s3.us-west-2.amazonaws.com/next-s3-uploads/ce035420-ec1a-41b0-98e2-642d4d0b6aa5/append-2p.png)
 
-**04** Append Editor
+**04.** Append Editor
 
 We need to define how will the "duplicates" be handled. What will happen if there are rows in both datasets that share the same entities? You have to decide whether you will keep the data from the original dataset, from the new one, or drop both.
 
@@ -54,7 +52,7 @@ Now we are going to combine this data with the third dataset, with information o
 
 **06.**	Merge Editor
 
-6.1 Criteria to combine the rows
+**6.1** Criteria to combine the rows
 
 How can we know which rows from the first dataset correspond to each row from the second one.
 
@@ -62,7 +60,7 @@ Year and Sales Person are the two entities of our data. In this example, we just
 
 ![merg edit 1p.jpg](https://alphacast-images.s3.us-west-2.amazonaws.com/next-s3-uploads/5ca0ce48-cdac-45c8-8b9d-bb6096cd5c39/merg-edit-1p.jpg)
 
-6.2 Find a match between both datasets
+**6.2** Find a match between both datasets
 
 We have to decide what will happen when not all rows and columns in both datasets find a match in the other one.
 There are four options here.
