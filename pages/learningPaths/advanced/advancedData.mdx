@@ -2,80 +2,35 @@
  
 <iframe width="560" height="315" src="https://www.youtube.com/embed/6ipnOzqOjjg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-**Step by Step Guide: How to Create New Variables**
+**Step by Step Guide: Calculate Variables**
 
-The **Calculate Variable** pipeline step let you create new variables. It is an all-purpose formula parser to create new variables in a more "Excelish" way.
+Welcome to the advanced level learning path! Begin exploring advanced data processing features. So, let's get started! 
 
-01. Fetch Alphacast Dataset
+This video will demonstrate how to create new variables using the **"Calculate Variable"** pipeline step. 
 
-_In this example equity data from Yahoo Finance is used by adding the name of the tickers for Microsoft, Apple, and Google. Select the columns to be used, such as **Close**_
+**01.** Fetch Dataset:
 
+*in the example, we used the analysis of equity data from Yahoo Finance (AAPL, MSFT, GOOG)*
 
-02. Add the **Calculate Variable** step
+**02.** Add the **Select Columns** step in the Filters category
 
-There is an extensive library of formulas that can be used, including operators, logical and conditional formulas, row and grouping functions, and more. Add formulas by typing the name and opening the parenthesis. But let's begin with an easy example
+*select the columns to be used, such as “Close.”*
 
-Exmample 1: Use the AT sign to make reference to variables in the dataset. Then write a simple formula using an asterisk and two to multiply. Et voilá! Now you have the serie multiplied by two.
+**02.** Add the **Calculate Variable** step in the Transforms category 
 
-Example 2: Add another **Calculate variable** step for this new exercise. To add the square root of Close, you'll have to write **sqrt(@close)**. Use nested formulas to replace Close with the square of Close by typing **sqrt(power(@close,2))**. Click save to see a preview.
+**03.** Choose a **name** for the new column. Then, to add formulas, simply type the name of the column you want to work with, using the format **@column**. From there, you can begin adding formulas by **opening a parenthesis** and selecting the desired function or operator.
 
+To unlock the full potential of the Formula Editor, explore our extensive library of formulas by clicking [here!](https://www.alphacast.io/p/luciano/insights/2022-2-1-pOLoak)
 
+- Use an asterisk and two to multiply.                                                                            
+![image](https://user-images.githubusercontent.com/90727312/221877616-c475d109-1d50-4f2d-9c33-cecfac17ebf1.png)
+- Use nested formulas to replace close with the square of close.                                                        
+![image](https://user-images.githubusercontent.com/90727312/221877448-bf1ea5f1-0cb3-48e2-b51e-f3fadeba9927.png)
+- Use Group Functions to split the dataset into groups defined by the entity values and make calculations within those groups.
+ ![image](https://user-images.githubusercontent.com/90727312/221877325-38dc98bc-53b2-4718-a05b-1efb15683992.png)
+- Use Rolling Window functions to make calculations within a group and also within a rolling window.
+![image](https://user-images.githubusercontent.com/90727312/221877161-7443262b-7827-4e01-87a9-7932861d7d9e.png)
 
+Once you have finished, click on the 'Save and preview' button to save your work and see the result of your calculations. Alternatively, you can add a new step to create a chart and visualize your data.
 
-Explore the different types of formulas, including Row Functions and Group Functions.
-
-Use Group Functions to split the dataset into groups defined by the entity values and make calculations within those groups.
-
-Use Rolling Window functions to make calculations within a group and also within a rolling window.
-
-Explore more options such as conditional IF, shift, or date variables in the quick tips section of the learning center.
-
-In the next video, learn other advanced data transformation techniques.
-
-------------------------------------------
-
-Hi! Welcome again to the advanced level learning path. We will now begin exploring advanced data processing features. In this video, I will show you how to create new variables with the “Calculate Variable” pipeline step.
-
-The calculate variable step is an all-purpose formula parser to create new variables in a more "Excelish" way. There are dozens of operators, comparisons, and functions that allow endless combinations that match your needs.
-
-Let’s dive in!
-
-For our first example, we will load equity data from Yahoo Finance. Let’s add the step and write the name of the tickers for Microsoft, Apple and Google. 
-
-Remember from our intermediate level data transformation video, that the entity after fetching "Yahoo Finance" data is “ticker”, and that the columns are open, close, high, low, and volume. For this example, we will select only Close.
-
-The first calculation will be very simple. At the top, we will write the name of the new variable, and in the box below, the formula. . The syntax will look very similar to other tools you probably use.
-
-Here you can use the AT sign to make reference to variables in the dataset. For example, writing AT and C, the variable "Close" will appear. With an asterisk and two, you can multiply. 
-
-For our next example, we will add a formula. We have an extensive library of formulas that you can use. As a reference, you can check the full list in the resources section of the learning center. There are operators, logical and conditional formulas, grouping functions, and more. We will illustrate some of these in a minute.
-
-You can add formulas by typing the name and opening the parenthesis. Let’s write, for example, the square root of Close
-
-Formulas can also be nested. I can, for example, replace Close with the square of Close. To do that, write power, Close, and 2.
-
-By clicking save we can see a preview.
-
-These formulas are a specific type of formula that we call “Row Functions”. That is, functions that only use data from the same row to be calculated.
-
-Another type of formula is the “Group Function”. Instead of working with a single row, the group functions split the dataset into groups defined by the entity values, and make calculations within those groups.
-
-Let’s go back to the equity data to see an example.
-
-Let’s say we want to calculate the average price of a ticker. We can do that by writing “Mean”, a group function, and defining Close as the variable. We then have to choose which is the variable that will define the groups, that in this case is “ticker”.
-
-Doing this, we are creating a new variable where each row has the average price of each ticker.
-
-There are lots of group functions that you can use such as minimum, maximums, cumulative sums, ranks, quantiles, or variance.  
-
-The next group of functions is the "Rolling Window functions". Rolling windows are a special class of group function: calculations are made within a group AND also within a rolling window. You have to define not only the group but also the number of periods to be included in the rolling calculation
-
-So, in this example, we will calculate the average price for each ticker again, but this time is a moving average of 30 days.
-
-Notice how this formula looks very similar to the "mean" formula, but now it includes the number of periods.
-
-The two new variables that we have calculated look like this.
-
-There is much more to learn in the "calculate variable" step. The conditional IF, the shift, or the date variables. I recommend you explore the quick tips section on the learning center to get inspiration. 
-
-See you in the next video, where we will dive into other advanced data transformation technics. 
+In the next video, we will explore additional advanced data transformation techniques that you can use to take your analysis to the next level!
