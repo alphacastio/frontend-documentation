@@ -10,26 +10,40 @@ This video will teach you about pipelines and how they can process data in Alpha
 
 Pipelines are the most powerful feature of the platform, allowing you to process data within it. They consist of a sequence of steps that transform data in a variety of ways.
 
-You can choose different ways to start creating a pipeline:
+**01.** You can choose different ways to start creating a pipeline:
 
 - The long road involves click on **Create new Pipeline** in the top right corner of the screen, then choose the repository and the desired pipeline name, finally click on the 'create' button.
 
 ![image](https://user-images.githubusercontent.com/90727312/221910379-cf20b150-db30-47b9-ba9d-ac7a6a379430.png)
 
-- The quick way to do it is by clicking on **Transform** directly in the dataset view.
-
-**01.** Fetch [Alphacast](https://www.alphacast.io/datasets/external-sector-brazil-secex-external-trade-9195) Dataset:
-
-**02.** Add the **Select Columns** step in the filters category: *in this case, exports and imports*
-
-**03.** Add the **Rename Columns** step in the reshaping category and pick a new name for the variables
-
-**04.** Add the **Apply Transform** step and select **sum last 12 months** on the drop-down menu and which variable you want to transform.                             
-  ![image](https://user-images.githubusercontent.com/90727312/221948847-cd9fc202-8d5f-4a6a-bf07-20c83351fce5.png)
+- The quick way to do it is by clicking on **Transform** directly in the dataset view
+                                                                               
+![image](https://user-images.githubusercontent.com/90727312/222175304-b8547e64-77f3-4ed5-ba79-af96195d47de.png)
 
 
-**05.** Add the step **Publish to dataset** and choose a name. The dataset will be created in the same repository as the pipeline.
+**02.** Fetch Alphacast Dataset                                                                                                                               
+*in the example used in the video, we will be using the [external trade](https://www.alphacast.io/datasets/external-sector-brazil-secex-external-trade-9195) of Brazil*    
+![image](https://user-images.githubusercontent.com/90727312/222191645-e800f96b-8619-49e2-8651-db8806585877.png)
 
-**06.** If you do not wish to publish the datasets, you can create a **Data Snapshot** which takes a snapshot of the data up to that step and provides you access to it through a link.
+
+**03.** Add the **Select Columns** step in the filters category and then select which variables you want to use                            
+*In this case, exports and imports*                                                                                                                                     
+![image](https://user-images.githubusercontent.com/90727312/222177155-8557357b-ec9e-4771-a3f1-3cd4773d9110.png)
+
+
+**04.** Add the **Rename Columns** step in the reshaping category and pick a new name for the variables                                                  
+![image](https://user-images.githubusercontent.com/90727312/222180173-a54a8c41-d55c-410e-accc-2915addf4720.png)
+
+
+**05.** Add the **Apply Transform** step and select **sum last 12 months** on the drop-down menu and which variable you want to transform.                             
+  ![image](https://user-images.githubusercontent.com/90727312/221948847-cd9fc202-8d5f-4a6a-bf07-20c83351fce5.png)                                                       
+This step enables you to modify the original data based on its frequency and combine different transformations according to your requirements. To view all transformation options, click [here](https://frontend-documentation-amber.vercel.app/stepsLibrary/transform)
+
+The transformation used in the video, Sum last 12 months, refers to adding the values of a particular variable for the past 12 months. It is a common analytical calculation used to track trends and performance over time.
+
+**06.** Add the step **Publish to dataset** and choose a name. The dataset will be created in the same repository as the pipeline. Click [here](https://frontend-documentation-amber.vercel.app/stepsLibrary/publish) for more information                                 
+![image](https://user-images.githubusercontent.com/90727312/222187485-eb792682-3f03-4816-8d31-a266e2f7c9fa.png)                                                     
+
+**07.** If you do not wish to publish the datasets, you can create a **Data Snapshot** which takes a snapshot of the data up to that step and provides you access to it through a link. More information is available by clicking [here](https://frontend-documentation-amber.vercel.app/stepsLibrary/data-snapshot)
 
 In the next video, you will learn how to change the frequency, perform data interpolation, and modify the units.
