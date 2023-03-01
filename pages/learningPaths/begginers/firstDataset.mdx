@@ -1,27 +1,46 @@
 # Part 3. Creating your first dataset
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/wNKsBZtktI0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pZ1bNOxK4ww" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 
 **Step by Step Guide: How to Bring Your Own Data to Alphacast**
 
-First, click on **"Create new dataset"** in the top right corner of the screen.
+There are many ways to create datasets. In this video, we will learn how to upload data manually. We'll also learn how to connect a file from Google Drive. Let's dive in!
 
-*Note that datasets in Alphacast require each variable to be in a separate column and that there must be a column with dates or timestamps to upload and visualize the data in charts.*
+**01.** Click on **"Create new dataset"** in the top right corner of the screen.
 
-Prepare your data avoiding empty rows and making sure column names are not repeated.
+Make sure your CSV, XLSX or file from Google Drive has a column with a **Date** and each variable to be in a separate column. Prepare your data avoiding empty rows and making sure column names are not repeated.
 
-**01.** Select the **file** you want to upload. You can select an Excel (xls or xlsx) or CSV file from your computer or Google Drive.
+**02.** Select the **file** you want to upload. You can select an Excel (xls or xlsx) or CSV file from your computer or Google Drive file.
 
-**02.** Configuring your dataset and determining if entities are needed:
+![image](https://user-images.githubusercontent.com/90727312/222150176-d1a61482-952e-424b-a81c-a11ddc3a0260.png)
 
- - It is important to identify which columns will be used as entities and which columns can be ignored because are necessary to uniquely define a row of the dataset. Click each column and select to handle it as an entity or ignore the column. 
- - and then you can define the type of each variable as text or number and only indicate the date format for date column. 
+### GOOGLE DRIVE
+
+If you want to **connect it to a file in Google Drive**, first **sign in** with Google in order to synchronize your data. Once you have given Alphacast permission, you will be able to add a file from your Google Drive. With this option, updates will be made automatically. If you choose an XLSX or CSV, when data is added, you will have to upload your file again.
+
+**03.** Configuring your dataset and defining the entity columns and the variables:
+
+- The entity columns are those necessary to uniquely define a row of the dataset. All datasets must have at least one “Entity” column with the date. Click each column and select to handle it as an entity or indicate which variables you want to ignore.
+ - Then you can define the type of each variable as text or number and only indicate the date format for date column. 
 
    ![image](https://user-images.githubusercontent.com/90727312/221684212-98ccd42c-a431-4861-803b-3f5ca77fd47f.png)
-
-**03.** Click "Next" and choose the name of the dataset and save it in the desired repository
+   
+**04.** Click "Next" and choose the name of the dataset and save it in the desired repository
 
 Wait a couple of seconds for the data to upload and become ready to use!
+   
+### What is an Entity?
 
-Move on to the next section on how to create charts.
+The Entity columns are necessary to uniquely define a row of the dataset, the combinations of Entities cannot be repeated. For example, if your only entity is Date your dataset cannot have repeating dates. If your entities are Date and Country the dates can be repeated, but the combinations of date and country must be unique.
+
+### What are the accepted formats for date columns when creating a dataset?
+
+When creating a new dataset, the date column must be selected, marked as entity and, in data type, select the format. YY-MM-DD (year, month, day) is generally used, but can be changed with the Change Date Format button.
+
+For instance, in the following case the format is YYYY-MM-DD and you can click on Change Date Format to match it with the format you have on your file, like it is shown in the image. Also, you can see the Python date formats for reference.
+![image](https://user-images.githubusercontent.com/90727312/222167855-a125136a-370e-4536-8ad9-039179b9fda6.png)
+
+
+Move on to the next section on how to create charts!
 
