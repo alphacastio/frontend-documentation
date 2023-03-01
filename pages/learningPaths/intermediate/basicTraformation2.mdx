@@ -6,21 +6,19 @@
 
 **Step by Step Guide: How to change Frequency & Units**
 
-**01.** *Fetch Yahoo Finance Ticker*
-
-To create a pipeline, click on Create Pipeline at the top right corner. Select a name and a repository for it, then choose **Yahoo Finance Fetch**.
+**01.** To create a pipeline, click on Create Pipeline at the top right corner. Select a name and a repository for it, then choose **Yahoo Finance Fetch**. Select the *Ticker* you what to. In our example, we will choose *GOOC*
 
 ![Interm - part 2 - fetch posta.png](https://alphacast-images.s3.us-west-2.amazonaws.com/next-s3-uploads/8c1e5fda-0ab8-411e-8a9e-4c319ac322d3/Interm---part-2---fetch-posta.png)
 
-**02.** *Change Frequency*
-
-Adding the **Change Frequency** step to select your daily data and convert it to either monthly, quarterly, or yearly data. In this example, we will select the **Close** column and we will change the frequency by selecting a formula for monthly data. 
+**02.** Adding the **Change Frequency** step to select your daily data and convert it to either monthly, quarterly, or yearly data. In this example, we will select the **Close** column and we will change the frequency by selecting a formula for monthly data. 
 
 ![image](https://alphacast-images.s3.us-west-2.amazonaws.com/next-s3-uploads/80a00e94-1c37-4be8-a8f9-d09e655c7a87/Interm---part-2---freq.jpg)
 
-**03.** *Change Unit*
+When going from a lower frequency to a higher frequency (i.e. monthly to daily) you have to select from the 8 interpolation options: Repeat the value, linear interpolation, quadratic, cubic, polynomial, and piecewise, Splines and Krogh interpolation.
 
-To Change the units of a dataset, we need to use the **Apply Country Trasform**. It will recognize the frequency of your dataset, and the available options will depend on it. The usual options include changing the unit to constant prices, percentage of GDP, dollars, or per capita.
+Alternatively, when going from higher to lower (I,e. monthly to quarterly) there are 6 options: average all the values, sum, select the min or max, or the last and first.
+
+**03.** To Change the units of a dataset, we need to use the **Apply Country Trasform**. It will recognize the frequency of your dataset, and the available options will depend on it. The usual options include changing the unit to constant prices, percentage of GDP, dollars, or per capita.
 
 ![image](https://user-images.githubusercontent.com/106676128/221672781-f1344885-f97c-45dc-8df5-404b46d0e42b.png)
 
