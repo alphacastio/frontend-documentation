@@ -9,35 +9,35 @@
 
 Watch the video to learn about two useful reshaping pipeline steps: Melt and Unstack.
 
-It's important to understand that Melt and Unstack are opposite transforms. Melt converts wide-format data to long-format data, while Unstack converts long-format data to wide-format data
+It's important to understand that Melt and Unstack are opposite transforms. Melt converts wide-format data to long-format data, while Unstack converts long-format data to wide-format data. "Wide to Long" and "Long to Wide" steps are useful to solve this:                                                                                    ![Untitled Diagram.drawio (2).png](https://alphacast-images.s3.us-west-2.amazonaws.com/next-s3-uploads/7b03ceaf-082a-4008-a759-a7218f89c6a0/Untitled-Diagram.drawio-%282%29.png)
 
-First **Fetch Dataset:** *this example use the Jane and Joe Doe sales dataset*
+**01.** First **Fetch Dataset:** *this example use the Jane and Joe Doe sales dataset*
 
 ### Unstack
 
 Unstacking is a process that involves converting the unique values of an entity into columns, which can help rearrange the data. **Know that only one column can be unstacked at a time.**
 
-**01.** Add an **Long to Wide (Unstack)** step in the reshaping category 
+**02.** Add an **Long to Wide (Unstack)** step in the reshaping category 
 
-**02.** Select the entity that you want to unstack and choose the variable that you wish to use. Note that the other variables in the dataset will be discarded. 
+**03.** Select the entity that you want to unstack and choose the variable that you wish to use. Note that the other variables in the dataset will be discarded. 
 
 If you don't want the entity name to be used as a prefix for new column names, simply uncheck the 'New column names' option.
 
 ![image](https://user-images.githubusercontent.com/90727312/221629770-a351b191-8d3b-4b2f-8fa9-3b568e089673.png)
 
-**03.** Click 'Save and Preview Data' to review the updated dataset                                                                                             
+**04.** Click 'Save and Preview Data' to review the updated dataset                                                                                             
 ![image](https://user-images.githubusercontent.com/90727312/222196758-b080cce3-898d-48b6-93dc-7f5eb0381292.png)
 
 
 ### Melt
 
-**01.** Add an **Wide to Long (Melt)** step in the reshaping category 
+**02.** Add an **Wide to Long (Melt)** step in the reshaping category 
 
-**02.** Choose the name for the values and select columns to convert to rows
+**03.** Choose the name for the values and select columns to convert to rows
 
 ![image](https://user-images.githubusercontent.com/90727312/221652182-6814e296-6e10-47c5-85bf-ec5a0df16d20.png)
 
-**03.** Remember to click 'Save and Preview Data' to review the updated dataset                                                                                
+**04.** Remember to click 'Save and Preview Data' to review the updated dataset                                                                                
 ![image](https://user-images.githubusercontent.com/90727312/222196288-74d925b2-7e70-482f-9091-2568b66e0f7b.png)
 
 
