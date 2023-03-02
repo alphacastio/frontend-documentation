@@ -63,18 +63,15 @@ Year and Sales Person are the two entities of our data. In this example, we just
 **6.2** Find a match between both datasets
 
 We have to decide what will happen when not all rows and columns in both datasets find a match in the other one.
-There are four options here.
+There are four types of criteria for joining:
 
-•	First, keep all the rows from the first dataset, even if they don't match a row in the second one.
+![image.png](https://alphacast-images.s3.us-west-2.amazonaws.com/next-s3-uploads/ceea19d5-7c24-4843-96ba-42b49e841b7d/image.png)
 
-•	Second, the same criteria but keeping rows from the second dataset.
-
-•	Third, keep all the rows from both datasets, even if they don't match.
-
-•	Finally, keep only those rows that match.
+- **Inner join:** The new dataset will have only those rows that can be **matched**.
+- **Left join:** All the rows of dataset A will be present and the unmatched rows of dataset B are discarded.
+- **Right join:** Reverse to the previous one. All those from dataset B and discarded the unmatched ones from A.
+- **Outer join:** The data from both datasets will remain even if they do not match.
 
 ![last merge1.jpg](https://alphacast-images.s3.us-west-2.amazonaws.com/next-s3-uploads/93530b1b-ffbd-428e-8576-a677a1cfefd8/last-merge1.jpg)
 
-In this example, all the rows match, so the result will look alike with any option.
-
-
+In this example, all the rows match, so the result will look alike with any option. For more information on Merging Datasets click [here](https://www.alphacast.io/p/luciano/insights/2022-2-5-gKcGcd)
