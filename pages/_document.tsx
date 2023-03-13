@@ -2,7 +2,7 @@ import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
     const meta = {
-        title: "Alphacast Learn Center",
+        title: "Alphacast Learning Center",
         description: "Unleash your data",
         image: "/alphacast-social.png",
     };
