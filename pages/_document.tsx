@@ -1,4 +1,5 @@
 import { Html, Head, Main, NextScript } from "next/document";
+import Script from "next/script";
 
 export default function Document() {
     const meta = {
@@ -24,6 +25,19 @@ export default function Document() {
 
                 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
                 <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+                <Script
+                    src={`https://www.googletagmanager.com/gtag/js?id=UA-175566358-1`}
+                    strategy="afterInteractive"
+                />
+                <Script id="google-analytics" strategy="afterInteractive">
+                    {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-175566358-1');
+        `}
+                </Script>
 
             </Head>
             <body>
