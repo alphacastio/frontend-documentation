@@ -43,7 +43,7 @@ const Footer = ({ }) => {
         <footer className="min-w-full">
             <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 border-t border-gray-200 text-sm">
                 <nav className=" -my-2 flex flex-wrap justify-center" aria-label="Footer">
-                    <span className="hidden sm:block py-2 text-center text-sm text-gray-400">&copy; 2023 Alphacast, Inc. All rights reserved.</span>
+                    <span className="hidden sm:block py-2 text-center text-sm text-gray-400">&copy; 2024 Alphacast, Inc. All rights reserved.</span>
                     {navigation.main.map((item) => (
                         <div key={item.name} className="px-5 py-2">
                             <a href={item.href} className="text-sm text-gray-500 hover:text-indigo-600">
